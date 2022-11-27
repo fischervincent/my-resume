@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .section-card {
+    @apply bg-gray-200 p-8
+  }
+}

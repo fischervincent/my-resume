@@ -1,3 +1,48 @@
 ---
+const skills=[
+  {name:'JavaScript'},
+  {name:'Typescript'},
+  {name:'React'},
+  {name:'Node'},
+  {name:'NestJS'},
+  {name:'MongoDB'},
+  {name:'SQL'},
+  {name:'AWS'},
+  {name:'Microservices'},
+  {name:'Serverless'},
+  {name:'Serverless framework'},
+  {name:'Terraform'},
+  {name:'HTML'},
+  {name:'CSS'},
+]
 ---
-I love my job.
+
+<div class="section-card">
+  <div class="flex">
+    <div class="flex-1">
+      <p class="text-2xl mb-4">I LOVE my job!</p>
+      <p>
+        My job is to <b>deliver great web apps or APIs</b>,
+        <br />
+        and sometimes I have to solve fun puzzles like:
+        <br />
+        “How do we spend more times working on features, and less times on resolving
+        bugs or writing tests?”.
+        <br />
+        And “How do I reduce the response time without paying too much in infrastructure?”.
+        <br />
+        It’s so much fun to work as a team to figure out these issues and find solutions
+        that work best for the project and the team, especially with the continuously
+        moving ecosystem that is the web.
+      </p>
+    </div>
+    <div class="w-80 ml-8">
+      <h1>8 years of experience coding webapps</h1>
+      <div>
+        {skills.map(({name})=>
+          <span class="badge badge-lg text-xl p-4 my-2 mr-2">{name}</span>
+        )}
+      </div>
+    </div>
+  </div>
+</div>

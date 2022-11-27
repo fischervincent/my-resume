@@ -5,9 +5,10 @@ export interface Props {
 
 const {title} = Astro.props;
 ---
-
-{title}
-<div>
-  <slot />
-</div>
+<section class="my-16">
+  <h1 class="text-2xl">{title}</h1>
+  <div class="my-8">
+    <slot />
+  </div>
+</section>
 
