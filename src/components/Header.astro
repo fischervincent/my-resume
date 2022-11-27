@@ -1,12 +1,18 @@
 ---
+import { sections } from 'constants/sections'
 ---
 <div class="navbar bg-base-100">
   <div class="flex-1" />
   <div class="flex-none">
     <ul class="menu menu-horizontal p-0 px-2">
-      <li ><a class="link hover:bg-inherit hover:text-primary">About me</a></li>
-      <li><a class="link hover:bg-inherit hover:text-primary">Projects</a></li>
-      <li><a class="link hover:bg-inherit hover:text-primary">Contact</a></li>
+      {Object.values(sections).map((section) => (
+      <li ><a 
+        href={`#${section.id}`} 
+        class="link hover:bg-inherit hover:text-primary">
+          {section.title}
+        </a></li>
+
+      ))}
       <li>
         <a
           class="link hover:bg-inherit hover:opacity-60 ml-4 px-1"

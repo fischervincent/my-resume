@@ -3,24 +3,21 @@ import AboutMe from 'components/AboutMe.astro';
 import Introduction from 'components/Introduction.astro';
 import { Projects } from 'components/projects/Projects';
 import Section from 'components/Section.astro';
+import { sections } from 'constants/sections';
 import Layout from 'layouts/Layout.astro';
 
 import 'styles/main.css'
 
-const sections = {
-	'aboutMe': "About Me",
-	'projects': "Projects",
-} as const
 ---
 
 <Layout title="Vincent Fischer">
 	<main>
 		<Introduction/>
-		<Section title={sections.aboutMe}>
+		<Section {...sections.aboutMe}>
 			<AboutMe/>
 		</Section>
 
-		<Section title={sections.projects}>
+		<Section {...sections.projects}>
 			<Projects/>
 		</Section>
 	</main>
