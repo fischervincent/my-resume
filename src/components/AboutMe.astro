@@ -18,8 +18,8 @@ const skills=[
 ---
 
 <div class="section-card">
-  <div class="flex">
-    <div class="flex-1">
+  <div class="grid grid-cols-6 lg:grid-cols-5 gap-2 md:gap-8">
+    <div class="col-span-6 md:col-span-3">
       <p class="text-2xl mb-4">I LOVE my job!</p>
       <p>
         My job is to <b>deliver great web apps or APIs</b>,
@@ -36,11 +36,12 @@ const skills=[
         moving ecosystem that is the web.
       </p>
     </div>
-    <div class="w-2/5 ml-8 text-center">
+    <div class="divider md:hidden col-span-6"></div> 
+    <div class="col-span-6 md:col-span-3 lg:col-span-2 md:text-center">
       <h1>8 years of experience coding webapps</h1>
-      <div>
+      <div class="flex flex-wrap gap-2 mt-2">
         {skills.map(({name})=>
-          <span class="badge badge-lg text-xl p-4 my-2 mr-2">{name}</span>
+          <span class="badge badge-lg text-xl p-4 my-1">{name}</span>
         )}
       </div>
     </div>
