@@ -4,6 +4,6 @@
 
 @layer components {
   .section-card {
-    @apply bg-gray-200 p-8
+    @apply bg-gray-200 p-8 rounded-md
   }
 }
