@@ -10,4 +10,8 @@ html {
   .section-card {
     @apply bg-gray-200 p-8 rounded-md
   }
+  .skill-badge {
+    @apply badge badge-lg text-xl p-4 my-1
+  }
+
 }

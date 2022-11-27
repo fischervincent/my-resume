@@ -33,7 +33,7 @@ export const Project = ({
       </div>
       <div className="col-span-6 flex flex-wrap gap-2">
         {skills.map((skill) => (
-          <span className="badge badge-lg text-xl p-4 my-1">{skill}</span>
+          <span className="skill-badge">{skill}</span>
         ))}
       </div>
     </div>
