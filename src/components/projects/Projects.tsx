@@ -1,3 +1,4 @@
+import { EurosportDescription, EurosportFacts } from "./Eurosport";
 import { GeodisDescription, GeodisFacts } from "./Geodis";
 import { Project } from "./Project";
 
@@ -21,14 +22,32 @@ const projects = [
     Facts: GeodisFacts,
     Description: GeodisDescription,
   },
+  {
+    companyName: "Eurosport",
+    role: "Tech lead",
+    dates: "2019 oct. - 2021 jul.",
+    skills: [
+      "Javascript",
+      "Node.js",
+      "graphQL",
+      "AWS",
+      "postgreSQL",
+      "Serverless",
+      "GCP",
+      "Terraform",
+      "CircleCI",
+    ],
+    Facts: EurosportFacts,
+    Description: EurosportDescription,
+  },
 ];
 
 export const Projects = () => {
   return (
-    <>
+    <div className="flex flex-col gap-16">
       {projects.map((project) => (
         <Project {...project} />
       ))}
-    </>
+    </div>
   );
 };
