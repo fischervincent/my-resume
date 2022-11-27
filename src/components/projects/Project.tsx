@@ -19,7 +19,7 @@ export const Project = ({
 }: ProjectProps) => {
   return (
     <div className="section-card grid grid-cols-6 gap-8">
-      <div className="col-span-4">
+      <div className="col-span-6 md:col-span-4">
         <h1 className="text-3xl font-bold">{companyName}</h1>
         <div className="flex items-end mb-8">
           <h2 className="text-2xl">{role}</h2>
@@ -27,7 +27,7 @@ export const Project = ({
         </div>
         <Description />
       </div>
-      <div className="col-span-2 text-sm">
+      <div className="col-span-6 md:col-span-2 text-sm">
         <h3 className="text-xl font-extralight mb-4">Some facts:</h3>
         <Facts />
       </div>
