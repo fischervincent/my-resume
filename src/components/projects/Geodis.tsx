@@ -1,8 +1,8 @@
 export const GeodisDescription = () => (
   <p>
-    We worked on a webapp to request, monitor and track shipping. The team was
-    composed of 5 to 8 developers, with most of them in Mexico, 1 scrum master,
-    1 PO and 1 PM.
+    We worked on a webapp to request, monitor and track shipping.
+    <br /> The team was composed of 5 to 8 developers, with most of them in
+    Mexico, 1 scrum master, 1 PO and 1 PM.
     <br />
     <br />
     One of the first thing I did was making the delivery process safer, and
