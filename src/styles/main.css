@@ -8,7 +8,7 @@ html {
 
 @layer components {
   .section-card {
-    @apply bg-gray-200 p-8 rounded-md
+    @apply bg-gray-100 p-8 rounded-md
   }
   .skill-badge {
     @apply badge badge-lg text-xl p-4 my-1
