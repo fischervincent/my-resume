@@ -1,13 +1,15 @@
 ---
 import AboutMe from 'components/AboutMe.astro';
 import Introduction from 'components/Introduction.astro';
+import { Projects } from 'components/projects/Projects';
 import Section from 'components/Section.astro';
 import Layout from 'layouts/Layout.astro';
 
 import 'styles/main.css'
 
 const sections = {
-	'aboutMe': "About Me"
+	'aboutMe': "About Me",
+	'projects': "Projects",
 } as const
 ---
 
@@ -16,6 +18,10 @@ const sections = {
 		<Introduction/>
 		<Section title={sections.aboutMe}>
 			<AboutMe/>
+		</Section>
+
+		<Section title={sections.projects}>
+			<Projects/>
 		</Section>
 	</main>
 </Layout>
