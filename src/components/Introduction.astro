@@ -24,9 +24,9 @@ const isAvailableSoon = true;
 
   </div>
 
-  <div hidden={!isAvailableSoon} class="flex items-center justify-center">
+  <div hidden={!isAvailableSoon} class="flex items-center justify-end sm:justify-center">
     <div class="flex flex-col">
-      <div class="alert alert-info shadow-lg">
+      <div class="alert alert-info shadow-lg hiddenAtFirst sm:hiddenRight">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           <div>
@@ -35,7 +35,7 @@ const isAvailableSoon = true;
           </div>
         </div>
       </div>
-      <a class="link link-primary text-right">
+      <a class="link link-primary text-right hiddenAtFirst sm:hiddenRight delayed">
         &gt; contact me
       </a>  
     </div>

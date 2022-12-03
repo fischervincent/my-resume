@@ -24,6 +24,32 @@ h5 {
   @apply text-sm font-extralight
 }
 
+.hiddenAtFirst{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 0.6s ease-out;
+}
+
+.hiddenAtFirst.hiddenRight{
+  transform: translateX(100%);
+}
+
+.hiddenAtFirst.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.delayed{
+  transition-delay: 300ms;
+}
+
+@media(prefers-reduced-motion) {
+  .hiddenAtFirst{
+    transition: none;
+  }  
+}
 
 @media (prefers-color-scheme: dark) {
   h1, strong{
