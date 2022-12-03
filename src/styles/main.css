@@ -1,17 +1,40 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "./tailwind.css";
 
 html {
   scroll-behavior: smooth;
 }
 
-@layer components {
-  .section-card {
-    @apply bg-gray-100 p-8 rounded-md
-  }
-  .skill-badge {
-    @apply badge badge-lg text-xl p-4 my-1
+h1{
+  @apply text-3xl font-bold
+}
+
+h2 {
+  @apply text-2xl uppercase font-extralight
+}
+
+h3 {
+  @apply text-xl uppercase font-extralight
+}
+
+h4 {
+@apply text-2xl uppercase
+}
+
+h5 {
+  @apply text-sm font-extralight
+}
+
+
+@media (prefers-color-scheme: dark) {
+  h1, strong{
+    @apply text-white
   }
 
+  h4 {
+    @apply text-[#484f58]
+  }
+
+  h5 {
+    @apply text-[#484f58]
+  }
 }

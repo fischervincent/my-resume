@@ -20,15 +20,15 @@ export const Project = ({
   return (
     <div className="section-card grid grid-cols-6 gap-8">
       <div className="col-span-6 md:col-span-4">
-        <h1 className="text-3xl font-bold">{companyName}</h1>
-        <div className="flex items-end mb-8">
-          <h2 className="text-2xl">{role}</h2>
-          <span className="ml-4">{dates}</span>
+        <h1>{companyName}</h1>
+        <div className="flex items-baseline mb-8">
+          <h2>{role}</h2>
+          <h5 className="ml-4">{dates}</h5>
         </div>
         <Description />
       </div>
       <div className="col-span-6 md:col-span-2 text-sm">
-        <h3 className="text-xl font-extralight mb-4">Some facts:</h3>
+        <h3 className="mb-4">Some facts</h3>
         <Facts />
       </div>
       <div className="col-span-6 flex flex-wrap gap-2">
