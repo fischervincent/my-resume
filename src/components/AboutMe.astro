@@ -15,6 +15,9 @@ const skills=[
   {name:'HTML'},
   {name:'CSS'},
 ]
+
+const startWorkingDate = new Date("2014-09-01");
+const nbYearsExperience = new Date().getFullYear() - startWorkingDate.getFullYear()
 ---
 
 <div class="section-card">
@@ -38,7 +41,7 @@ const skills=[
     </div>
     <div class="divider md:hidden col-span-6"></div> 
     <div class="col-span-6 md:col-span-3 lg:col-span-2 md:text-center">
-      <h3>8 years of experience</h3>
+      <h3>{nbYearsExperience} years of experience</h3>
       <div class="flex flex-wrap gap-2 mt-2 md:justify-center">
         {skills.map(({name})=>
           <span class="skill-badge">{name}</span>
@@ -56,7 +59,7 @@ const skills=[
     DX because I want the developers to build a great product without pain and fast.
     <br />
     <br />
-    I have 8 years of experience building great and complex web apps and API with easy to read code, with 2 years as tech lead.
+    I have {nbYearsExperience} years of experience building great and complex web apps and API with easy to read code, with 2 years as tech lead.
     My goal is for my team to deliver better and faster, without working more. It can be done by facilitating the communication, making the code bugproof, typesafe and more scalable with better tools and better code design, or by adding/removing some process to alleviate frictions.
   </p>
 </div>
