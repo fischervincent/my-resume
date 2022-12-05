@@ -2,6 +2,7 @@
 import AboutMe from 'components/AboutMe.astro';
 import Introduction from 'components/Introduction.astro';
 import { Projects } from 'components/projects/Projects';
+import ScrollingSkills from 'components/ScrollingSkills.astro';
 import Section from 'components/Section.astro';
 import { sections } from 'constants/sections';
 import Layout from 'layouts/Layout.astro';
@@ -13,7 +14,8 @@ import 'styles/main.css'
 <Layout title="Vincent Fischer">
 	<main>
 		<Introduction/>
-		<Section {...sections.aboutMe}>
+		<ScrollingSkills/>
+		<Section {...sections.aboutMe} class="mt-48">
 			<AboutMe/>
 		</Section>
 

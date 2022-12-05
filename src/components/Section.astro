@@ -1,15 +1,17 @@
 ---
-export interface Props {
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
   title: string;
   id: string;
 }
 
-const {title, id} = Astro.props;
+const {title, id, class: className} = Astro.props;
 ---
-<section class="my-16 mt-8 sm:mt-16" id={id}>
-  <h2>{title}</h2>
-  <div class="my-2">
-    <slot />
+<section class={className} id={id}>
+  <div class="my-16 mt-8 sm:mt-16 z-50 relative">
+      <h2>{title}</h2>
+    <div class="my-2">
+      <slot />
+    </div>
   </div>
 </section>
 

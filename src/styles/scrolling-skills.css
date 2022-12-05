@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+
+@keyframes scrolling
+{
+  0%
+  {
+    transform: rotateX(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0px) translateX(calc(-67%)) translateY(calc(-132%));
+  }
+  70%
+  {
+    transform: rotateX(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0px) translateX(calc(60%)) translateY(calc(13%));
+  }
+  100%
+  {
+    transform: rotateX(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0px) translateX(calc(60%)) translateY(calc(13%));
+  }
+}
+
+
+.scrolling-container{
+  animation-name:scrolling;
+  animation-duration: 400s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+
+  display: grid;
+  grid-template-columns: repeat(15, 140px);
+  grid-template-rows: repeat(15, 140px);
+  gap: 40px;
+  width: auto;
+  position: absolute;
+  top: 450px;
+  left: 30vw;
+}
+
+.scrolling-container.first{
+  animation-delay: -120s;
+}
+
+.scrolling-container.second{
+  animation-delay: -320s;
+}
+
+.skill-card{
+  width: 140px;
+  height: 140px;
+  grid-row-start: var(--startX);
+  grid-column-start: var(--startY);
+  
+  box-shadow:
+  -1px 0 28px 0 rgba(var(--shadowcolor), 0.01),
+  -18px 18px 28px 0 rgba(var(--shadowcolor), 0.55);
+  background-color: rgb(var(--bgcolor));
+  border: 1px solid rgba(var(--shadowcolor), 0.2);
+  border-radius: 16px;
+  transition: 500ms;
+}
+
+.skill-card:hover{
+  transform: translate3d(5px, -10px, 0);
+  box-shadow:
+  -1px 0 28px 0 rgba(var(--shadowcolor), 0.01),
+  -34px 34px 18px -10px rgba(var(--shadowcolor), 0.55);
+}
+
+.skill-img {
+  padding: 16px 16px 16px 16px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.skill-name {
+  @apply absolute bottom-2 left-1/2 -translate-x-1/2 text-center rounded-2xl py-2 px-4 bg-white opacity-0;
+  transition: 100ms;
+  transition-delay: 200ms;
+  background-color: rgb(var(--bgcolor));
+  border: 2px solid rgba(var(--textcolor),0.1);
+  color: rgb(var(--textcolor))
+}
+
+.skill-card:hover .skill-name {
+  @apply opacity-100;
+}

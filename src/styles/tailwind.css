@@ -3,15 +3,6 @@
 @tailwind components;
 
 @layer components {
-  .section-card {
-    @apply bg-base-200 p-8 rounded-md
-  }
-  @media (prefers-color-scheme: dark) {
-    .section-card {
-      @apply border-solid border-[1px]
-    }
-  }
-  
   .skill-badge {
     @apply badge badge-lg text-xl p-4 my-1
   }
