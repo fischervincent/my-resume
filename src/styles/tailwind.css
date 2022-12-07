@@ -4,6 +4,6 @@
 
 @layer components {
   .skill-badge {
-    @apply badge badge-lg text-xl p-4 my-1
+    @apply badge badge-outline badge-lg text-xl p-4 my-1 
   }
 }
