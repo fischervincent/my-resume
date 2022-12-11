@@ -26,10 +26,17 @@ export const Projects = () => {
   const [selectedSkills, setSelectedSkills] = useState<MultiValue<SkillOption>>(
     []
   );
+  const filteredProjects = projects.filter(({ skills }) => {
+    if (!selectedSkills.length) return true;
+    const atLeastOne = selectedSkills.some(({ value }) =>
+      skills.includes(value)
+    );
+    return atLeastOne;
+  });
 
   return (
     <div className="flex flex-col gap-8">
-      <div>
+      <div className="max-w-[500px]">
         <h5>Filter by skills, roles or methodologies</h5>
         <Select
           isMulti
@@ -39,20 +46,17 @@ export const Projects = () => {
           value={selectedSkills}
           onChange={(value) => setSelectedSkills(value)}
         />
+        {!!selectedSkills.length && (
+          <p>
+            Showing {filteredProjects.length} of {projects.length} projects.
+          </p>
+        )}
       </div>
 
       <div className="flex flex-col gap-16">
-        {projects
-          .filter(({ skills }) => {
-            if (!selectedSkills.length) return true;
-            const atLeastOne = selectedSkills.some(({ value }) =>
-              skills.includes(value)
-            );
-            return atLeastOne;
-          })
-          .map((project) => (
-            <Project {...project} />
-          ))}
+        {filteredProjects.map((project) => (
+          <Project {...project} />
+        ))}
       </div>
     </div>
   );
