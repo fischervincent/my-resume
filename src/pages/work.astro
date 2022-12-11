@@ -10,6 +10,7 @@ import 'styles/main.css'
 <Layout title="Vincent Fischer">
 	<main>
 		<Section title="Work experiences" id="work">
+			{/* does not build if client:load */}
 			<Projects client:only/>
 		</Section>
 	</main>
