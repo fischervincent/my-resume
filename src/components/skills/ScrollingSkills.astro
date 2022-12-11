@@ -47,52 +47,45 @@ const skillsWithColors = skills.map(({color, shadowcolor: defaultShadowColor, bg
     textColor,
   }
 })
-let currentY = 1;
-let nbInCurrentY = 0;
-const skillsWithStart = [...skillsWithColors, ...skillsWithColors, ...skillsWithColors].map((skill) => {
-  if(nbInCurrentY > 2) {
-    currentY++
-    nbInCurrentY = 0;
-  }
-  nbInCurrentY++
-  return {
-    ...skill,
-    startX: currentY,
-    startY: currentY + nbInCurrentY,
-  }
-})
+
+const longListOfSkills = [...skillsWithColors, ...skillsWithColors.slice(Math.floor(skillsWithColors.length*2/3), skillsWithColors.length)]
+const nbCols = Math.floor(longListOfSkills.length / 2)
+
 ---
-<div class="absolute left-0 w-screen">
-  <div class='absolute left-0 -top-96 h-[900px] z-40'
-  style="box-shadow: 0 0 calc(100vw / 2 - 1024px / 2 - 160px) calc(100vw / 2 - 1024px / 2 - 160px) rgba(255,255,255,1);
-  -webkit-box-shadow: 0 0 calc(100vw / 2 - 1024px / 2 - 160px) calc(100vw / 2 - 1024px / 2 - 160px) rgba(255,255,255,1);
-  +-moz-box-shadow: 0 0 calc(100vw / 2 - 1024px / 2 - 160px) calc(100vw / 2 - 1024px / 2 - 160px) rgba(255,255,255,1);"/>
+<div class="mt-36">
+  <h4 class="text-center tracking-wide font-light text-gray-500">Some cool tech I have been using</h4>
+  
+  <div class="w-screen absolute left-0 h-[360px] pt-4 overflow-hidden">
 
-  <div class='absolute right-0 top-40 h-[900px] z-40'
-  style="box-shadow: 0 0 calc(100vw / 2 - 1024px / 2 - 160px) calc(100vw / 2 - 1024px / 2 - 160px) rgba(255,255,255,1);
-  -webkit-box-shadow: 0 0 calc(100vw / 2 - 1024px / 2 - 160px) calc(100vw / 2 - 1024px / 2 - 160px) rgba(255,255,255,1);
-  +-moz-box-shadow: 0 0 calc(100vw / 2 - 1024px / 2 - 160px) calc(100vw / 2 - 1024px / 2 - 160px) rgba(255,255,255,1);"/>
-
-  <div class="absolute top-0 left-0 w-screen h-[1400px]">
-    <div class="scrolling-container first">
-      {skillsWithStart.map(({name, startX, startY, src, shadowColor, bgColor, textColor}) => {
+    <div class='absolute left-0 -top-96 h-[900px] z-40'
+    style="box-shadow: 0 0 calc(100vw / 2 - 896px / 2 - 160px) calc(100vw / 2 - 896px / 2) rgba(255,255,255,1);
+    -webkit-box-shadow: 0 0 calc(100vw / 2 - 896px / 2) calc(100vw / 2 - 896px / 2) rgba(255,255,255,1);
+    +-moz-box-shadow: 0 0 calc(100vw / 2 - 896px / 2) calc(100vw / 2 - 896px / 2) rgba(255,255,255,1);"/>
+  
+    <div class='absolute right-0 top-40 h-[900px] z-40'
+    style="box-shadow: 0 0 calc(100vw / 2 - 896px / 2) calc(100vw / 2 - 896px / 2) rgba(255,255,255,1);
+    -webkit-box-shadow: 0 0 calc(100vw / 2 - 896px / 2) calc(100vw / 2 - 896px / 2) rgba(255,255,255,1);
+    +-moz-box-shadow: 0 0 calc(100vw / 2 - 896px / 2) calc(100vw / 2 - 896px / 2) rgba(255,255,255,1);"/>
+  
+    <div class="scrolling-container first" style={`--nbcols: ${nbCols}`}>
+      {longListOfSkills.map(({name, src, shadowColor, bgColor, textColor}) => {
         return (
-          <div class="skill-card relative with-depth" style={`--startX: ${startX}; --startY: ${startY}; --bgcolor: ${bgColor}; --shadowcolor: ${shadowColor}; --textcolor: ${textColor}`}>
+          <div class="skill-card relative with-depth" style={`--bgcolor: ${bgColor}; --shadowcolor: ${shadowColor}; --textcolor: ${textColor}`}>
             {src ? <img class="m-auto skill-img block w-36 h-36" src={src} /> : null}
             <div class="skill-name">{name}</div>
           </div>
         )
       })}
     </div>
-    <div class="scrolling-container second">
-      {skillsWithStart.map(({name, startX, startY, src, shadowColor, bgColor, textColor}) => {
+    <div class="scrolling-container second" style={`--nbcols: ${nbCols}`}>
+      {longListOfSkills.map(({name, src, shadowColor, bgColor, textColor}) => {
         return (
-          <div class="skill-card relative with-depth" style={`--startX: ${startX}; --startY: ${startY}; --bgcolor: ${bgColor}; --shadowcolor: ${shadowColor}; --textcolor: ${textColor}`}>
+          <div class="skill-card relative with-depth" style={`--bgcolor: ${bgColor}; --shadowcolor: ${shadowColor}; --textcolor: ${textColor}`}>
             {src ? <img class="m-auto skill-img block w-36 h-36" src={src} /> : null}
             <div class="skill-name">{name}</div>
           </div>
         )
       })}
-    </div>    
+    </div>
   </div>
 </div>

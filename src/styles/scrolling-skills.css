@@ -7,20 +7,23 @@
 {
   0%
   {
-    transform: rotateX(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0px) translateX(calc(-67%)) translateY(calc(-132%));
+    transform: translateX(calc(-100%));
   }
-  70%
+  89%
   {
-    transform: rotateX(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0px) translateX(calc(60%)) translateY(calc(13%));
+    transform: translateX(calc(80%));
   }
   100%
   {
-    transform: rotateX(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0px) translateX(calc(60%)) translateY(calc(13%));
+    transform: translateX(calc(80%));
   }
 }
 
 
 .scrolling-container{
+  position: absolute;
+  left: 0;
+
   animation-name:scrolling;
   animation-duration: 400s;
   animation-timing-function: linear;
@@ -28,28 +31,21 @@
   animation-fill-mode: none;
 
   display: grid;
-  grid-template-columns: repeat(15, 140px);
-  grid-template-rows: repeat(15, 140px);
+  grid-template-columns: repeat(var(--nbcols), 140px);
   gap: 40px;
-  width: auto;
-  position: absolute;
-  top: 50px;
-  left: 30vw;
 }
 
 .scrolling-container.first{
-  animation-delay: -120s;
+  animation-delay: -100s;
 }
 
 .scrolling-container.second{
-  animation-delay: -320s;
+  animation-delay: -300s;
 }
 
 .skill-card{
   width: 140px;
   height: 140px;
-  grid-row-start: var(--startX);
-  grid-column-start: var(--startY);
   
   box-shadow:
   -1px 0 28px 0 rgba(var(--shadowcolor), 0.01),
