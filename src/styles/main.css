@@ -5,11 +5,11 @@ html {
 }
 
 h1{
-  @apply text-3xl font-bold
+  @apply text-5xl font-bold mb-4
 }
 
 h2 {
-  @apply text-2xl uppercase font-extralight
+  @apply text-2xl font-bold mb-6
 }
 
 h3 {
