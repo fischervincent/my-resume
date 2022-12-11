@@ -1,4 +1,4 @@
-import { Skill } from "./skills";
+import { Skill } from "components/skills";
 
 const coreSkills = [
   {

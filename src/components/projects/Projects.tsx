@@ -1,53 +1,56 @@
-import { EurosportDescription, EurosportFacts } from "./Eurosport";
-import { GeodisDescription, GeodisFacts } from "./Geodis";
+import { useState } from "react";
+
+import Select, { MultiValue } from "react-select";
+
+import { Skill } from "components/skills";
+import type { ISkill } from "components/skills";
 import { Project } from "./Project";
+import { projects } from "./constants/projects";
 
 // decided to use react on this because I want a search feature
 // to filter projects
 
-const projects = [
-  {
-    companyName: "Geodis SCO",
-    role: "Tech lead",
-    dates: "2022 sept. - today",
-    skills: [
-      "React",
-      "TypeScript",
-      "Node.js",
-      "Express",
-      "Micro services",
-      "Turborepo",
-      "Azure",
-    ],
-    Facts: GeodisFacts,
-    Description: GeodisDescription,
-  },
-  {
-    companyName: "Eurosport",
-    role: "Tech lead",
-    dates: "2019 oct. - 2021 jul.",
-    skills: [
-      "Javascript",
-      "Node.js",
-      "graphQL",
-      "AWS",
-      "postgreSQL",
-      "Serverless",
-      "GCP",
-      "Terraform",
-      "CircleCI",
-    ],
-    Facts: EurosportFacts,
-    Description: EurosportDescription,
-  },
-];
+interface SkillOption {
+  value: ISkill;
+  label: ISkill;
+}
+
+const skillOptions = Object.entries(Skill).map(([, value]) => ({
+  value,
+  label: value,
+}));
 
 export const Projects = () => {
+  const [selectedSkills, setSelectedSkills] = useState<MultiValue<SkillOption>>(
+    []
+  );
+
   return (
-    <div className="flex flex-col gap-16">
-      {projects.map((project) => (
-        <Project {...project} />
-      ))}
+    <div className="flex flex-col gap-8">
+      <div>
+        <h5>Filter by skills, roles or methodologies</h5>
+        <Select
+          isMulti
+          name="skills"
+          options={skillOptions}
+          value={selectedSkills}
+          onChange={(value) => setSelectedSkills(value)}
+        />
+      </div>
+
+      <div className="flex flex-col gap-16">
+        {projects
+          .filter(({ skills }) => {
+            if (!selectedSkills.length) return true;
+            const atLeastOne = selectedSkills.some(({ value }) =>
+              skills.includes(value)
+            );
+            return atLeastOne;
+          })
+          .map((project) => (
+            <Project {...project} />
+          ))}
+      </div>
     </div>
   );
 };

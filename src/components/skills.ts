@@ -5,13 +5,19 @@ export const Skill = {
   CUCUMBER: 'Cucumber',
   DOCKER: 'Docker',
   GCP: 'GCP',
+  CLOUD_FUNCTION: 'Cloud Function',
   GIT: 'git',
   GITHUB_ACTIONS: 'Github Actions',
   GRAPHQL: 'GraphQL',
+  EXPRESS: 'Express',
+  MICRO_SERVICES: 'Microservices',
+  TURBOREPO: 'TurboRepo',
   JAVASCRIPT: 'JavaScript',
   JEST: 'Jest',
   LAMBDA: 'Lambda',
   SQS_SNS: 'SQS/SNS',
+  AURORA_SERVERLESS: 'Aurora Serverless',
+  WAF: 'WAF',
   MONGODB: 'MongoDB',
   MYSQL: 'MySQL',
   NESTJS: 'NestJS',
@@ -25,10 +31,15 @@ export const Skill = {
   SERVERLESS_FRAMEWORK: 'Serverless Framework',
   TERRAFORM: 'Terraform',
   TYPESCRIPT: 'Typescript',
+  SENTRY: 'Sentry',
+  NEW_RELIC: 'New Relic',
+  // METHODOLOGIES
+  TDD: 'TDD',
+  // ROLES
   BACKEND: 'Backend',
   FRONTEND: 'Frontend',
   FULLSTACK: 'Fullstack',
   TECHLEAD: 'Tech lead',
 } as const;
 
-type Skill = typeof Skill[keyof typeof Skill]
+export type ISkill = typeof Skill[keyof typeof Skill]
