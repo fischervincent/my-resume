@@ -23,16 +23,17 @@ export const Skills = () => {
   // no flex because I wanted to have hover effect on scrolling skills (component below this one)
   return (
     <>
-      <table>
+      <p>Here are my main skills.</p>
+      <table className="border-separate border-spacing-y-4">
         {coreSkills.map(({ category, skills }) => (
           <tr>
             <td>
-              <h3 className="pr-4">{category}</h3>
+              <span className="pr-8 text-lg">{category}</span>
             </td>
             <td>
-              <div className="flex-1 flex flex-row gap-4 flex-wrap px-4">
+              <div>
                 {skills.map((skill) => (
-                  <span className="skill-badge">{skill}</span>
+                  <span className="skill-badge mr-5">{skill}</span>
                 ))}
               </div>
             </td>
