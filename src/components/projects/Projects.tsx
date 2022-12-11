@@ -7,6 +7,8 @@ import type { ISkill } from "components/skills";
 import { Project } from "./Project";
 import { projects } from "./constants/projects";
 
+import "./multi-select.css";
+
 // decided to use react on this because I want a search feature
 // to filter projects
 
@@ -32,6 +34,7 @@ export const Projects = () => {
         <Select
           isMulti
           name="skills"
+          className="multi-select"
           options={skillOptions}
           value={selectedSkills}
           onChange={(value) => setSelectedSkills(value)}

@@ -1,0 +1,4 @@
+/* to avoid flickering when loading JS */
+.multi-select>div:first-of-type{
+  display: flex;
+}
