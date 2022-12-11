@@ -2,8 +2,7 @@ import { useState } from "react";
 
 import Select, { MultiValue } from "react-select";
 
-import { Skill } from "components/skills";
-import type { ISkill } from "components/skills";
+import { Skill, ISkill } from "components/skills";
 import { Project } from "./Project";
 import { projects } from "./constants/projects";
 
