@@ -51,16 +51,16 @@ h5 {
   }  
 }
 
-@media (prefers-color-scheme: dark) {
-  h1, strong{
-    @apply text-white
-  }
 
-  h4 {
-    @apply text-[#484f58]
+/* NAVBAR */
+@media screen and (max-width: 900px) {
+  .menu :where(li) > :where(*:not(ul)){
+    @apply p-2
   }
+}
 
-  h5 {
-    @apply text-[#484f58]
+@media screen and (max-width: 640px) {
+  .menu :where(li) > :where(*:not(ul)){
+    @apply p-1
   }
 }
