@@ -1,11 +1,8 @@
 ---
-import AboutMe from 'components/AboutMe.astro';
 import Introduction from 'components/Introduction.astro';
 import { Projects } from 'components/projects/Projects';
 import ScrollingSkills from 'components/skills/ScrollingSkills.astro';
 import Section from 'components/Section.astro';
-import { Skills } from 'components/skills/SkillsSection';
-import { sections } from 'constants/sections';
 import Layout from 'layouts/Layout.astro';
 
 import 'styles/main.css'
@@ -15,13 +12,9 @@ import 'styles/main.css'
 <Layout title="Vincent Fischer">
 	<main>
 		<Introduction/>
-		<Skills />
 		<ScrollingSkills/>
-		<Section {...sections.aboutMe} class="mt-48">
-			<AboutMe/>
-		</Section>
 
-		<Section {...sections.projects}>
+		<Section title="Work experience" id="work">
 			<Projects/>
 		</Section>
 	</main>
