@@ -1,43 +1,26 @@
 ---
+import Section from "./Section.astro";
+
 const isAvailableSoon = true;
 ---
-<div class="mt-8 grid gap-8 sm:gap-0 sm:grid-cols-2">
-  <div class="flex flex-col w-fit p-8 backdrop-blur-xl rounded-2xl z-50 border-2 border-opacity-40 border-white">
-    <div class="text-4xl w-fit mb-2">
-      <div class="relative md:text-right mh-12">
-        <span class="md:absolute md:left-0 md:top-0"><b class="text-primary text-5xl">Hi</b>,</span>
-        <span class="md:align-sub md:pl-4 whitespace-nowrap" >I'm <strong>Vincent Fischer</strong></span>
-      </div>
-      <div>a <strong>fullstack JS developer</strong></div>
-      <div class="text-[2.20rem]">and occasionally <span class="whitespace-nowrap">tech lead</span></div>
+  <div class="flex">
+    <div class="flex-1">
+      <h1 class="m-0">Vincent Fischer</h1>
+      <p class="text-2xl">Fullstack JS Developer</p>
+      <p class="text-2xl font-extralight mb-8">and occasionally TechLead</p>
+      <p>
+        I <strong>LOVE</strong> my job and I might be looking for new challenges.
+      </p>
+      <p>
+        8 years of experience delivering complex webapps and APIs.
+      </p>
     </div>
-
-    <div>
-      <p>I was frustrated to squash my resume into one page,</p>
-      <p>so I created this webpage.</p>
-    </div>
-
-    <a hidden={isAvailableSoon} class="link link-primary text-right">
-      &gt; contact me
-    </a>
-
-  </div>
-
-  <div hidden={!isAvailableSoon} class="flex items-center justify-end sm:justify-center">
-    <div class="flex flex-col">
-      <div class="alert alert-info shadow-lg hiddenAtFirst sm:hiddenRight">
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          <div>
-            <span class="text-lg">I'm available soon!</span>
-            <div class="text-xs">January 2023</div>
-          </div>
-        </div>
+    <div class="flex flex-col justify-between">
+      <div></div>
+      <div class="flex flex-col items-center">
+        <span>I'm available</span>
+        <a class="btn btn-outline btn-primary">Contact me</a>
       </div>
-      <a class="link link-primary text-right hiddenAtFirst sm:hiddenRight delayed">
-        &gt; contact me
-      </a>  
     </div>
   </div>
 
-</div>
