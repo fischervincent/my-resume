@@ -1,0 +1,11 @@
+.hiddenAtFirst.hiddenClip{
+  opacity: 1;
+  filter: none;
+  transform: none;
+  clip-path: polygon(0 0, 1px 0, 1px 100%, 0 100%);
+  transition: all 1s ease-in-out;
+}
+
+.hiddenAtFirst.hiddenClip.show{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
