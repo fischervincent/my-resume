@@ -35,7 +35,7 @@ export const GroupSkills = ({
             <div className="relative">
               {isFavorite && (
                 <span className="absolute -left-6">
-                  <span className="tooltip" data-tip="favorite">
+                  <span className="tooltip tooltip-left" data-tip="favorite">
                     <img
                       src="/assets/img/star.svg"
                       alt="favorite"
