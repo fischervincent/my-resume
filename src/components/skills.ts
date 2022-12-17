@@ -12,7 +12,7 @@ export const Skill = {
   EXPRESS: 'Express',
   MICRO_SERVICES: 'Microservices',
   TURBOREPO: 'TurboRepo',
-  JAVASCRIPT: 'JavaScript',
+  JAVASCRIPT: 'Javascript',
   JEST: 'Jest',
   LAMBDA: 'Lambda',
   SQS_SNS: 'SQS/SNS',
@@ -36,8 +36,8 @@ export const Skill = {
   // METHODOLOGIES
   TDD: 'TDD',
   // ROLES
-  BACKEND: 'Backend',
-  FRONTEND: 'Frontend',
+  BACKEND: 'BackEnd',
+  FRONTEND: 'FrontEnd',
   FULLSTACK: 'Fullstack',
   TECHLEAD: 'Tech lead',
 } as const;

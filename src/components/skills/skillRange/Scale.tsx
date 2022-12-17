@@ -1,13 +1,17 @@
+import { useState } from "react";
+
 export const Scale = ({
   nbTicks,
   unityShort = "yr",
   unityLong = "years",
   color = "rgba(0,0,0,0.5)",
+  onFilterChange,
 }: {
   nbTicks: number;
   unityShort?: string;
   unityLong?: string;
   color?: string;
+  onFilterChange: (filter: number) => void;
 }) => {
   const Tick = (posX: number, text?: string) => (
     <div className="absolute" style={{ top: "-35px", left: `${posX}%` }}>
@@ -31,18 +35,29 @@ export const Scale = ({
 
   const ticks = [firstTick, ...midTicks, lastTick];
 
+  const [filterValue, setFilterValue] = useState(nbTicks * 12);
+  const onFilterInputChange = (ev: React.ChangeEvent<HTMLInputElement>) => {
+    setFilterValue(Number(ev.currentTarget.value));
+    onFilterChange(nbTicks * 12 - Number(ev.currentTarget.value));
+  };
+
   return (
-    <div
-      className="relative"
-      style={{
-        borderBottom: `1px solid ${color}`,
-      }}
-    >
+    <div className="relative mb-4">
+      <input
+        type="range"
+        className="absolute w-full h-full -left-2 pr-[9px] z-50"
+        style={{ direction: "rtl" }}
+        min={0}
+        max={nbTicks * 12}
+        step={6}
+        value={filterValue}
+        onChange={onFilterInputChange}
+      />
       <span
-        className="inline-block absolute right-0 -top-[6px] -rotate-45 p-[5px]"
+        className="inline-block absolute -top-[6px] right-[8px] -rotate-45 p-[7px]"
         style={{
-          border: `solid ${color}`,
-          borderWidth: "0 2px 2px 0",
+          border: `solid #0B5CC8`,
+          borderWidth: "0 3px 3px 0",
         }}
       />
       <div className="relative mr-6">

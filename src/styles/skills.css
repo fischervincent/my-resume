@@ -9,3 +9,21 @@
 .hiddenAtFirst.hiddenClip.show{
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
+
+input[type="range"] {
+  height: 4px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  transform: scaleX(0.5) scaleY(1.3);
+}
+
+
+input[type=range]::-moz-range-thumb {
+  transform: scaleX(0.5) scaleY(1.3);
+}
+
+
+input[type=range]::-ms-thumb {
+  transform: scaleX(0.5) scaleY(1.3);
+}
