@@ -9,6 +9,7 @@ import type { ISkill } from "components/skills";
 interface Skills {
   skillName: ISkill;
   experienceLevel: number;
+  isFavorite?: boolean;
 }
 
 export const SkillRange = ({

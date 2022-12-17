@@ -8,7 +8,11 @@ export const GroupSkills = ({
   disabled = false,
 }: {
   group: string;
-  sortedSkills: { skillName: string; experienceLevel: number }[];
+  sortedSkills: {
+    skillName: string;
+    experienceLevel: number;
+    isFavorite?: boolean;
+  }[];
   getWidthFromLevel: (level: number) => number;
   disabled?: boolean;
 }) => {
@@ -26,15 +30,34 @@ export const GroupSkills = ({
         {group}
       </div>
       <div ref={parent} className="relative mb-2 mr-6" key={`${group}-skills`}>
-        {sortedSkills.map(({ skillName, experienceLevel }) => (
-          <SkillBar
-            key={skillName}
-            skillName={skillName}
-            experienceLevel={experienceLevel}
-            getWidthFromLevel={getWidthFromLevel}
-            disabled={disabled}
-          />
-        ))}
+        {sortedSkills.map(
+          ({ skillName, experienceLevel, isFavorite = false }) => (
+            <div className="relative">
+              {isFavorite && (
+                <span className="absolute -left-6">
+                  <span className="tooltip" data-tip="favorite">
+                    <img
+                      src="/assets/img/star.svg"
+                      alt="favorite"
+                      width={20}
+                      height={20}
+                      style={{
+                        opacity: disabled ? 0.5 : 1,
+                      }}
+                    />
+                  </span>
+                </span>
+              )}
+              <SkillBar
+                key={skillName}
+                skillName={skillName}
+                experienceLevel={experienceLevel}
+                getWidthFromLevel={getWidthFromLevel}
+                disabled={disabled}
+              />
+            </div>
+          )
+        )}
       </div>
     </>
   );
