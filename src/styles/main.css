@@ -5,7 +5,7 @@ html {
 }
 
 h1{
-  @apply text-5xl font-bold mb-4
+  @apply text-3xl font-bold font-serif
 }
 
 h2 {
