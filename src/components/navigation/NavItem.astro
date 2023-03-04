@@ -11,10 +11,12 @@ export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
 const { path, title } = Astro.props;
 
 const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1); // remove the first "/"
-const getActiveClass = (path: NAV_ITEM["path"]) => currentPath === path ? 'text-black bg-gray-100 rounded-lg' : 'hover:text-primary'
----
+const currentPath = pathname.replace(/\//g, "");; // remove "/"
 
+const getActiveClass = (path: NAV_ITEM["path"]) => 
+  currentPath === path ? 'text-black bg-gray-100 rounded-lg' : 'hover:text-primary'
+
+---
 <li >
   <a
     href={`/${path}`}
