@@ -1,0 +1,24 @@
+---
+import type { NAV_ITEMS } from './NavItems';
+
+type NAV_ITEM = typeof NAV_ITEMS[number];
+
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  title: NAV_ITEM["title"];
+  path: NAV_ITEM["path"];
+}
+
+const { path, title } = Astro.props;
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+const getActiveClass = (path: NAV_ITEM["path"]) => currentPath === path ? 'text-black bg-gray-100 rounded-lg' : 'hover:text-primary'
+---
+
+<li >
+  <a
+    href={`/${path}`}
+    class={`p-2 ${getActiveClass(path)}`}>
+    {title}
+  </a>
+</li>
