@@ -7,6 +7,7 @@ import { Project } from "./Project";
 import { projects } from "./constants/projects";
 
 import "./multi-select.css";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 // decided to use react on this because I want a search feature
 // to filter projects
@@ -25,6 +26,8 @@ export const Projects = () => {
   const [selectedSkills, setSelectedSkills] = useState<MultiValue<SkillOption>>(
     []
   );
+  const [parent] = useAutoAnimate<HTMLDivElement>();
+
   const filteredProjects = projects.filter(({ skills }) => {
     if (!selectedSkills.length) return true;
     const atLeastOne = selectedSkills.some(({ value }) =>
@@ -52,9 +55,9 @@ export const Projects = () => {
         )}
       </div>
 
-      <div className="flex flex-col gap-16">
+      <div ref={parent} className="flex flex-col gap-16">
         {filteredProjects.map((project) => (
-          <Project {...project} />
+          <Project key={project.dates} {...project} />
         ))}
       </div>
     </div>
