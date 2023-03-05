@@ -1,3 +1,28 @@
+<script>
+  const myEmail = document.getElementById("myEmail");
+  if(myEmail){
+    myEmail.onclick = function() {
+    const range = document.createRange();
+    range.selectNodeContents(myEmail);
+    const selection = window.getSelection();
+    if(selection){
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+  }
+};
+</script>
+
 <div>
-  Coming soon!
+  <div class="mb-6">
+    <p >You have a project that you want to discuss ?</p>
+    <p>Or you just want to say hello ?</p>
+  </div>
+  <p class="mb-2 sm:mb-0">
+    Feel free to contact by sending an email to 
+    <span id="myEmail" class="link-primary border py-1 rounded-sm">www.vincentfischer.dev@gmail.com</span>
+  </p>
+  <p>
+    Or reach out to me on <a class="link link-primary" href="https://www.linkedin.com/in/vincent-fischer/">Linked<img class="inline align-text-top pl-[1px]" width="20" height="20" alt="linkedIn" src="/assets/img/linkedIn34.png"></a>
+  </p>
 </div>

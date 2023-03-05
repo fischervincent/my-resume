@@ -1,11 +1,14 @@
 ---
+import Section from 'components/Section.astro';
 import Contact from 'components/Contact.astro';
 import Layout from 'layouts/Layout.astro';
 
 ---
 
-<Layout title="Vincent Fischer">
-	<main>
-		<Contact/>
+<Layout title="Contact">
+	<main class="w-full">
+		<Section title="Contact" id="contact">
+			<Contact />
+		</Section>
 	</main>
 </Layout>
