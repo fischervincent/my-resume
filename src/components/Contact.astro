@@ -12,6 +12,23 @@
       myEmail.focus();
     }
   };
+
+
+  const clipboardImg = document.getElementById("copied-img");
+  
+  clipboardImg!.onclick = function() {
+    navigator.clipboard.writeText('www.vincentfischer.dev@gmail.com');
+    const copied = document.getElementById("copied");
+    if(copied){
+      copied.classList.remove("before:hidden");
+      copied.classList.remove("after:hidden");
+      setTimeout(function(){
+        copied.classList.add("before:hidden");
+        copied.classList.add("after:hidden");
+    }, 3000);
+    }
+  };
+
 </script>
 
 <div>
@@ -19,11 +36,40 @@
     <p >You have a project that you want to discuss ?</p>
     <p>Or you just want to say hello ?</p>
   </div>
-  <p class="mb-2 sm:mb-0">
-    Feel free to contact by sending an email to 
-    <span id="myEmail" class="link-primary border py-1 rounded-sm">www.vincentfischer.dev@gmail.com</span>
-  </p>
-  <p>
-    Or reach out to me on <a class="link link-primary" href="https://www.linkedin.com/in/vincent-fischer/">Linked<img class="inline align-text-top pl-[1px]" width="20" height="20" alt="linkedIn" src="/assets/img/linkedIn34.png"></a>
-  </p>
+  <p class="mb-2">Feel free to contact by email or on linkedin:</p>
+  
+  <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+    <div class="flex flex-1 flex-row items-center space-x-2 p-2 border border-gray-600 rounded-md flex-nowrap overflow-visible">
+      <img width="32" height="32" alt="mail" src="/assets/img/mail.svg">
+      <span id="myEmail" class="text-sm overflow-ellipsis overflow-hidden flex-1 text-center">www.vincentfischer.dev@gmail.com</span>
+      <div class="flex flex-col space-y-1">
+        <div id="copied" class="tooltip tooltip-bottom tooltip-open before:hidden after:hidden" data-tip="copied">
+          <img id="copied-img" class="cursor-pointer"
+          width="24" height="24" alt="copy" src="/assets/img/clipboard.svg">
+        </div>
+        <a href="mailto:www.vincentfischer.dev@gmail.com" target="_blank">
+          <img class="cursor-pointer" width="24" height="24" alt="send" src="/assets/img/goto.svg">
+        </a>
+      </div>
+    </div>
+
+    <div class="flex flex-1 flex-row items-center space-x-2 p-2 border border-gray-600 rounded-md flex-nowrap overflow-visible min-h-[70px]">
+      <a 
+        href="https://www.linkedin.com/in/vincent-fischer/"
+        target="_blank"
+      >
+        <img width="30" height="30" alt="linkedIn" src="/assets/img/linkedIn34.png">
+      </a>
+      <a 
+        href="https://www.linkedin.com/in/vincent-fischer/"
+        class="link link-primary text-sm overflow-ellipsis overflow-hidden flex-1 whitespace-nowrap text-center"
+        target="_blank"
+      >
+        www.linkedin.com/in/vincent-fischer
+      </a>
+       <a href="https://www.linkedin.com/in/vincent-fischer/" target="_blank">
+        <img class="cursor-pointer" width="24" height="24" alt="send" src="/assets/img/goto.svg">
+      </a>
+    </div>  
+  </div>
 </div>
