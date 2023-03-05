@@ -2,15 +2,16 @@
   const myEmail = document.getElementById("myEmail");
   if(myEmail){
     myEmail.onclick = function() {
-    const range = document.createRange();
-    range.selectNodeContents(myEmail);
-    const selection = window.getSelection();
-    if(selection){
-      selection.removeAllRanges();
-      selection.addRange(range);
+      const range = document.createRange();
+      range.selectNodeContents(myEmail);
+      const selection = window.getSelection();
+      if(selection){
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+      myEmail.focus();
     }
-  }
-};
+  };
 </script>
 
 <div>
