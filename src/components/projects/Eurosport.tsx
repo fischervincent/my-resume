@@ -32,23 +32,24 @@ export const EurosportDescription = () => (
   </p>
 );
 
-export const EurosportFacts = () => (
-  <>
-    <h5>About the graphql API:</h5>
-    <div>
-      <ul className="list-disc list-inside">
-        <li>
-          <b>7000+</b> requests per minutes
-        </li>
-        <li>
-          Average response time <b>22ms</b>
-        </li>
-        <li>
-          P95 &lt; <b>45ms</b>
-        </li>
-        <li>Less than 0.01% of errors</li>
-      </ul>
-    </div>
-    <br />
-  </>
-);
+export const EurosportFacts = [
+  {
+    title: "API key figures",
+    content: (
+      <div>
+        <ul className="list-disc list-inside">
+          <li>
+            <b>7000+</b> requests per minutes
+          </li>
+          <li>
+            Average response time <b>22ms</b>
+          </li>
+          <li>
+            P95 &lt; <b>45ms</b>
+          </li>
+          <li>Less than 0.01% of errors</li>
+        </ul>
+      </div>
+    ),
+  },
+];

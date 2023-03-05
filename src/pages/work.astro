@@ -6,7 +6,7 @@ import Layout from 'layouts/Layout.astro';
 ---
 
 <Layout title="Vincent Fischer">
-	<main>
+	<main class="w-full max-w-full overflow-hidden">
 		<Section title="Work Experiences" id="work">
 			{/* does not build if client:load */}
 			<Projects client:only/>

@@ -24,7 +24,7 @@ export const SkillBar = ({
           data-tip={`${formatedTime}`}
         >
           <div
-            className={`h-6 absolute t-0 l-0 text-left overflow-hidden whitespace-nowrap`}
+            className={`h-6 absolute t-0 l-0 text-left overflow-hidden whitespace-nowrap px-1`}
             style={{
               width: `100%`,
               clipPath: `polygon(0 0, ${width}% 0, ${width}% 100%, 0 100%)`,

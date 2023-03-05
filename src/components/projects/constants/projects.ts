@@ -2,12 +2,17 @@ import { ISkill, Skill } from "components/skills";
 import { EurosportDescription, EurosportFacts } from "../Eurosport";
 import { GeodisDescription, GeodisFacts } from "../Geodis";
 
+export interface Fact {
+  title: string;
+  content: JSX.Element;
+}
+
 interface IProject {
   companyName: string;
   role: string;
   dates: string;
   skills: ISkill[];
-  Facts: React.FC;
+  facts: Fact[];
   Description: React.FC;
 }
 
@@ -25,7 +30,7 @@ export const projects: IProject[] = [
       Skill.TURBOREPO,
       Skill.AZURE,
     ],
-    Facts: GeodisFacts,
+    facts: GeodisFacts,
     Description: GeodisDescription,
   },
   {
@@ -50,7 +55,7 @@ export const projects: IProject[] = [
       Skill.SENTRY,
       Skill.NEW_RELIC,
     ],
-    Facts: EurosportFacts,
+    facts: EurosportFacts,
     Description: EurosportDescription,
   },
 ];

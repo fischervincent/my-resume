@@ -57,7 +57,11 @@ export const Projects = () => {
 
       <div ref={parent} className="flex flex-col gap-16">
         {filteredProjects.map((project) => (
-          <Project key={project.dates} {...project} />
+          <Project
+            key={project.dates}
+            {...project}
+            selectedSkills={selectedSkills.map(({ value }) => value)}
+          />
         ))}
       </div>
     </div>

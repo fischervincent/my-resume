@@ -25,21 +25,50 @@ export const GeodisDescription = () => (
   </p>
 );
 
-export const GeodisFacts = () => (
-  <>
-    <p>
-      During my two first weeks, we did two moves to prod that went really wrong
-      and caused a lot of stress to the team. The git history was so broken in
-      the production branch that we deleted it... So I reworked the delivery
-      process. We had <b>no more issues</b> since, and we were able to move to
-      prod up to <b>2 times a day</b> without any stress.
-    </p>
-    <br />
-    <p>
-      I did a refacto in 2 day that made the code so much simpler that one
-      simple and clear function could have replaced 130+ exising functions. 1
-      simple generic function and 8 tests instead of 130+ functions and 400+
-      tests.
-    </p>
-  </>
-);
+export const GeodisFacts = [
+  {
+    title: "Delivery",
+    content: (
+      <p>
+        During my two first weeks, we did two moves to prod that went really
+        wrong and caused a lot of stress to the team. The git history was so
+        broken in the production branch that we deleted it... So I reworked the
+        delivery process. We had <b>no more issues</b> since, and we were able
+        to move to prod up to <b>2 times a day</b> without any stress.
+      </p>
+    ),
+  },
+  {
+    title: "Refacto",
+    content: (
+      <p>
+        I did a refacto in 2 day that made the code so much simpler that one
+        simple and clear function could have replaced 130+ exising functions. 1
+        simple generic function and 8 tests instead of 130+ functions and 400+
+        tests.
+      </p>
+    ),
+  },
+  {
+    title: "Recruting",
+    content: (
+      <p>
+        I did a refacto in 2 day that made the code so much simpler that one
+        simple and clear function could have replaced 130+ exising functions. 1
+        simple generic function and 8 tests instead of 130+ functions and 400+
+        tests.
+      </p>
+    ),
+  },
+  {
+    title: "Security",
+    content: (
+      <p>
+        I did a refacto in 2 day that made the code so much simpler that one
+        simple and clear function could have replaced 130+ exising functions. 1
+        simple generic function and 8 tests instead of 130+ functions and 400+
+        tests.
+      </p>
+    ),
+  },
+];
