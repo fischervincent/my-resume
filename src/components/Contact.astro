@@ -17,7 +17,7 @@
   const clipboardImg = document.getElementById("copied-img");
   
   clipboardImg!.onclick = function() {
-    navigator.clipboard.writeText('www.vincentfischer.dev@gmail.com');
+    navigator.clipboard.writeText('dev.vincentfischer@gmail.com');
     const copied = document.getElementById("copied");
     if(copied){
       copied.classList.remove("before:hidden");
@@ -41,13 +41,13 @@
   <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
     <div class="flex flex-1 flex-row items-center space-x-2 p-2 border border-gray-600 rounded-md flex-nowrap overflow-visible">
       <img width="32" height="32" alt="mail" src="/assets/img/mail.svg">
-      <span id="myEmail" class="text-sm overflow-ellipsis overflow-hidden flex-1 text-center">www.vincentfischer.dev@gmail.com</span>
+      <span id="myEmail" class="text-sm overflow-ellipsis overflow-hidden flex-1 text-center">dev.vincentfischer@gmail.com</span>
       <div class="flex flex-col space-y-1">
         <div id="copied" class="tooltip tooltip-bottom tooltip-open before:hidden after:hidden" data-tip="copied">
           <img id="copied-img" class="cursor-pointer"
           width="24" height="24" alt="copy" src="/assets/img/clipboard.svg">
         </div>
-        <a href="mailto:www.vincentfischer.dev@gmail.com" target="_blank">
+        <a href="mailto:dev.vincentfischer@gmail.com" target="_blank">
           <img class="cursor-pointer" width="24" height="24" alt="send" src="/assets/img/goto.svg">
         </a>
       </div>
