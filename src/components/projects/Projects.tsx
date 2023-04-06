@@ -37,9 +37,11 @@ export const Projects = () => {
   });
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-4">
       <div className="max-w-[500px]">
-        <h5>Filter by skills, roles or methodologies</h5>
+        <h5 className="text-sm font-extralight">
+          Filter by skills, roles or methodologies
+        </h5>
         <Select
           isMulti
           name="skills"

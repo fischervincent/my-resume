@@ -4,22 +4,6 @@ html {
   scroll-behavior: smooth;
 }
 
-h1{
-  @apply text-3xl font-bold font-serif
-}
-
-h2 {
-  @apply text-2xl font-bold mb-6
-}
-
-h4 {
-  @apply text-2xl uppercase
-}
-
-h5 {
-  @apply text-sm font-extralight
-}
-
 .hiddenAtFirst{
   opacity: 0;
   filter: blur(5px);

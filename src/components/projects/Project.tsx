@@ -38,10 +38,10 @@ export const Project = ({
   return (
     <div className="section-card">
       <div>
-        <h1 className="font-sans">{companyName}</h1>
+        <h1 className="font-sans text-3xl font-bold">{companyName}</h1>
         <div className="flex items-baseline mb-2">
-          <h2 className="mb-0">{role}</h2>
-          <h5 className="ml-4">{dates}</h5>
+          <h2 className="mb-0 text-2xl font-bold">{role}</h2>
+          <h5 className="ml-4 text-sm font-extralight">{dates}</h5>
         </div>
         <div ref={animatedSkills} className="flex flex-wrap gap-2 mb-6">
           {filteredSkills.map((skill) => (
@@ -64,7 +64,7 @@ export const Project = ({
         <div className="flex flex-col sm:flex-row sm:w-max space-y-4 sm:space-y-0 sm:space-x-6 my-4">
           {facts.map((fact) => (
             <div className="sm:w-[300px] p-4 sm:p-6 bg-white rounded-md shadow-md border border-gray-600">
-              <h2 className="mb-3">{fact.title}</h2>
+              <h2 className="mb-3 text-2xl font-bold">{fact.title}</h2>
               <p className="text-sm">{fact.content}</p>
             </div>
           ))}

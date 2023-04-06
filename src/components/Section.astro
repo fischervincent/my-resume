@@ -8,8 +8,8 @@ const {title, id, class: className} = Astro.props;
 ---
 <section class={className} id={id}>
   <div>
-    <h1>{title}</h1>
-    <div class="my-2">
+    <h1 class="text-3xl font-bold font-serif">{title}</h1>
+    <div class="my-8">
       <slot />
     </div>
   </div>

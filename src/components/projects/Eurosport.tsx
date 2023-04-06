@@ -15,7 +15,9 @@ export const EurosportDescription = () => (
     and a great team, and I cannot be more proud of the work we made.
     <br />
     <br />
-    <h5>A few interesting things we did:</h5>
+    <h5 className="text-sm font-extralight">
+      A few interesting things we did:
+    </h5>
     By redesigning our caching strategy, we were able to improve our P95 from
     250ms to 45ms, and reduce the cost of our database by half.
     <br />
