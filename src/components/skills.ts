@@ -15,6 +15,7 @@ export const Skill = {
   JAVASCRIPT: 'Javascript',
   JEST: 'Jest',
   LAMBDA: 'Lambda',
+  STEP_FUNCTION: 'Step Function',
   SQS_SNS: 'SQS/SNS',
   AURORA_SERVERLESS: 'Aurora Serverless',
   WAF: 'WAF',
