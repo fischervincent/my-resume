@@ -29,6 +29,7 @@ export const projects: IProject[] = [
       Skill.REACT,
       Skill.NODE,
       Skill.EXPRESS,
+      Skill.MONGODB,
       Skill.MICRO_SERVICES,
       Skill.TURBOREPO,
       Skill.AZURE,
