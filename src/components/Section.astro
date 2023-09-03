@@ -2,13 +2,18 @@
 export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
   title: string;
   id: string;
+  isWIP?: boolean;
 }
 
-const {title, id, class: className} = Astro.props;
+const { title, id, isWIP = false, class: className } = Astro.props;
 ---
+
 <section class={className} id={id}>
   <div>
-    <h1 class="text-3xl font-bold font-serif">{title}</h1>
+    <div class="flex items-center gap-2">
+      <h1 class="text-3xl font-bold font-serif">{title}</h1>
+      {isWIP && <span class="badge badge-primary">WIP</span>}
+    </div>
     <div class="my-8">
       <slot />
     </div>
