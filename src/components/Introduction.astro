@@ -1,65 +1,115 @@
-  <div>
-    <div class="flex flex-col sm:flex-row justify-between mb-16 sm:mb-0 overflow-hidden">
-      <div class="flex-1 mb-8">
-        <p class="text-3xl font-bold font-serif">Vincent Fischer</p>
-        <p class="text-2xl">Fullstack JS Developer</p>
-        <p class="text-lg font-extralight">and occasionally TechLead</p>
-        <span class="flex flex-row mt-2">
-          <a
+---
+const isAvailable = false;
+---
+
+<div>
+  <div
+    class="flex flex-col sm:flex-row justify-between mb-16 sm:mb-0 overflow-hidden"
+  >
+    <div class="flex-1 mb-8">
+      <p class="text-3xl font-bold font-serif">Vincent Fischer</p>
+      <p class="text-2xl">Fullstack JS Developer</p>
+      <p class="text-lg font-extralight">and occasionally TechLead</p>
+      <span class="flex flex-row mt-2">
+        <a
           class="link hover:bg-inherit hover:opacity-60 mr-2"
           aria-label="go to github profil"
           href="https://github.com/fischervincent/"
         >
-          <img width="24" height="24" alt="github" src="/assets/img/github32.png">
+          <img
+            width="24"
+            height="24"
+            alt="github"
+            src="/assets/img/github32.png"
+          />
         </a>
         <a
           class="link hover:bg-inherit hover:text-primary hover:opacity-60 px-1"
           aria-label="go to linkedIn profil"
           href="https://www.linkedin.com/in/vincent-fischer/"
         >
-          <img width="24" height="24" alt="linkedIn" src="/assets/img/linkedIn34.png">
+          <img
+            width="24"
+            height="24"
+            alt="linkedIn"
+            src="/assets/img/linkedIn34.png"
+          />
         </a>
       </span>
-      </div>
+    </div>
+    {
+      isAvailable && (
         <div class="flex flex-col items-end sm:items-center">
-        <span class="text-lg text-gray-600 hiddenAtFirst hiddenRight">I'm available!</span>
-        <a 
-          href="/contact"
-          class="btn btn-outline btn-primary hiddenAtFirst hiddenRight"
-        >
-          Contact me
-      </a>
-      </div>
-    </div>
-
-    <div class="leading-7">
-      <p>
-        <strong>Hi</strong>, I'm Vincent, a french <strong>web developer</strong> and <strong>tech lead</strong> based in Paris 
-        with <strong class="whitespace-nowrap">8 years</strong> of experience.<br />
-      </p>
-      <p class="mt-6">
-        I <strong>LOVE</strong> my job. I work with small and big companies to help them build 
-        <strong class="whitespace-nowrap">awesome products</strong>.
-      </p>
-      <p class="mt-6">
-        Here are a few things I do: <br />
-        <ul class="list-disc list-inside">
-          <li>developing and fixing complex features,</li>
-          <li>designing code that scales with the increasing complexity,</li>
-          <li>building CI/CD pipelines on a project with 20 developers,</li>
-          <li>architecting serverless infrastructure that scales,</li>
-          <li>optimizing request time and cost on an API called 8k times a minute,</li>
-          <li>improving the developer experience,</li>
-          <li>leading a team of 7 developers,</li>
-          <li>mentoring junior developers in best practives for software development,</li>
-          <li>recruting great developers,</li>
-          <li>and a lot </li>
-        </ul>
-      </p>
-      <p class="mt-6">
-        I'm freelance and available, <a href="/contact" class="link">contact me!</a><br />
-        I'm looking for a new challenge, short or long term.
-      </p>
-    </div>
+          <span class="text-lg text-gray-600 hiddenAtFirst hiddenRight">
+            I'm available!
+          </span>
+          <a
+            href="/contact"
+            class="btn btn-outline btn-primary hiddenAtFirst hiddenRight"
+          >
+            Contact me
+          </a>
+        </div>
+      )
+    }
   </div>
 
+  <div class="leading-7">
+    <p>
+      <strong>Hi</strong>, I'm Vincent, a french <strong>web developer</strong> and
+      <strong>tech lead</strong> based in Paris with <strong
+        class="whitespace-nowrap">8 years</strong
+      > of experience.<br />
+    </p>
+    <p class="mt-6">
+      I <strong>LOVE</strong> my job. I work with small and big companies to help
+      them build
+      <strong class="whitespace-nowrap">awesome products</strong>.
+    </p>
+    <p class="mt-6">
+      Here are a few things I do: <br />
+      <ul class="list-disc list-inside">
+        <li>developing and fixing complex features,</li>
+        <li>designing code that scales with the increasing complexity,</li>
+        <li>building CI/CD pipelines on a project with 20 developers,</li>
+        <li>architecting serverless infrastructure that scales,</li>
+        <li>
+          optimizing request time and cost on an API called 8k times a minute,
+        </li>
+        <li>improving the developer experience,</li>
+        <li>leading a team of 7 developers,</li>
+        <li>
+          mentoring junior developers in best practives for software
+          development,
+        </li>
+        <li>recruting great developers,</li>
+        <li>and a lot more...</li>
+      </ul>
+    </p>
+    {
+      isAvailable && (
+        <p class="mt-6">
+          I'm freelance and available,
+          <>
+            <a href="/contact" class="link">
+              contact me!
+            </a>
+            <br />
+          </>
+          I'm looking for a new challenge, short or long term.
+        </p>
+      )
+    }
+    {
+      !isAvailable && (
+        <p class="mt-6">
+          I'm not available full time at the moment but I'm always happy to chat
+          about tech, or help small projects. Feel free to
+          <a href="/contact" class="link">
+            contact me.
+          </a>
+        </p>
+      )
+    }
+  </div>
+</div>
