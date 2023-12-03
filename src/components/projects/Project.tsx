@@ -59,16 +59,21 @@ export const Project = ({
         <Recommendations recommendations={recommendations} />
       </div>
       {facts.length > 0 && (
-        <div className="overflow-x-auto mt-6 relative">
-          <div className="flex flex-col sm:flex-row sm:w-max space-y-4 sm:space-y-0 sm:space-x-6 my-4">
-            {facts.map((fact) => (
-              <div className="sm:w-[300px] p-4 sm:p-6 bg-white rounded-md shadow-md border border-gray-600">
-                <h2 className="mb-3 text-2xl font-bold">{fact.title}</h2>
-                <p className="text-sm">{fact.content}</p>
-              </div>
-            ))}
+        <>
+          <h2 className="font-sans text-lg font-bold text-gray-600">
+            Specific topics
+          </h2>
+          <div className="overflow-x-auto relative">
+            <div className="flex flex-col sm:flex-row sm:w-max space-y-4 space-x-4 sm:space-y-0 sm:space-x-6 my-4">
+              {facts.map((fact) => (
+                <div className="sm:w-[300px] sm:p-6 bg-white rounded-md shadow-md border border-gray-600 h-fit">
+                  <h2 className="mb-3 text-2xl font-bold">{fact.title}</h2>
+                  <p className="text-sm">{fact.content}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   );

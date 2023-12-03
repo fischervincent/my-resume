@@ -2,28 +2,14 @@ import type { Recommendation } from "./Recommendations";
 
 export const GeodisDescription = () => (
   <p>
-    We worked on a webapp to request, monitor and track shipping.
+    We worked on a webapp for clients to request, monitor and track shipping.
     <br /> The team was composed of 5 to 8 developers, with most of them in
-    Mexico, 1 scrum master, 1 PO and 1 PM.
+    Mexico. 1 scrum master, 1 PO and 1 PM.
     <br />
     <br />
-    One of the first thing I did was making the delivery process safer, and
-    integrated automatic release notes sent to our stakeholders.
+    During my time there we greatly improved the delivery process, the code
+    quality and the security while successfully delivering great features.
     <br />
-    <br />
-    In this project DX was terrible, it was taking so much time to deliver the
-    smallest feature, and we constantly had bugs. The data moving from backend
-    to front end and front end to backend was becoming more and more complex.
-    <br />
-    The architecture was micro services, with about 25 services.
-    <br />
-    Since we were only 1 dev team and it would stay that way, I decided with the
-    support of the team to slowly migrate to only 1 service instead of 6 for the
-    API that serves the frontend, migrate the frontend to typescript and use
-    <b>TRPC</b> to be <b>typesafe</b> from the backend to the frontend by
-    inference. <b>Safer and much simpler code</b>. <b>Typesafe</b> and
-    <b>straight forward</b>. In average 7 new files for a new feature, instead
-    of 20 before.
   </p>
 );
 
@@ -32,22 +18,25 @@ export const GeodisFacts = [
     title: "Delivery",
     content: (
       <p>
-        During my two first weeks, we did two moves to prod that went really
-        wrong and caused a lot of stress to the team. The git history was so
-        broken in the production branch that we deleted it... So I reworked the
-        delivery process. We had <b>no more issues</b> since, and we were able
-        to move to prod up to <b>2 times a day</b> without any stress.
+        During my three first weeks at Geodis we did two problematic moves to
+        production that caused a lot of stress to the team and to the
+        management. So I shifted the responsibility of deliveries from the
+        DevOps team to the development team, and we reworked the delivery
+        process. We fixed the git flow. And we added automatic release notes and
+        tags on our jira tickets to know exactly what was and what was going to
+        production. We went from disastrous deliveries in production every two
+        weeks to stress-free deliveries every few days.
       </p>
     ),
   },
   {
-    title: "Refacto",
+    title: "Refactoring",
     content: (
       <p>
-        I did a refacto in 2 day that made the code so much simpler that one
-        simple and clear function could have replaced 130+ exising functions. 1
-        simple generic function and 8 tests instead of 130+ functions and 400+
-        tests.
+        I noticed early that there were a lot of redundancy un our code, because
+        developers where used to copy-paste code. So we did some mob programming
+        during two days to make to code so much simpler. We replaced 130+
+        exising functions and 400+ tests by a few simple functions and 10 tests.
       </p>
     ),
   },
@@ -55,10 +44,35 @@ export const GeodisFacts = [
     title: "Recruting",
     content: (
       <p>
-        I did a refacto in 2 day that made the code so much simpler that one
-        simple and clear function could have replaced 130+ exising functions. 1
-        simple generic function and 8 tests instead of 130+ functions and 400+
-        tests.
+        Before departing from Geodis, I facilitated a seamless transition by
+        leading the recruitment process. Rather than presenting an overly
+        attractive picture, I conducted the interviews candidly, addressing the
+        project's challenges. Through pragmatic questioning and a focus on the
+        essential skills needed for the role, we successfully identified three
+        developers who were an excellent fit for the job, ensuring a smooth and
+        secure handover upon my departure.
+      </p>
+    ),
+  },
+  {
+    title: "Developer Experience",
+    content: (
+      <p>
+        The developer experience was really low when I arrived, delivering the
+        smallest feature took days and the number of bugs were increasing.
+        Developers were frustrated and tired. So I convinced the management to
+        invest in technical dept and developer experience. We took 15% of our
+        time to work on topics like:
+        <ul className="list-disc list-inside">
+          <li>
+            Targeted refactoring to resolve painpoints and make the coding
+            experience smoother
+          </li>
+          <li>Using Turborepo</li>
+          <li>Testing</li>
+          <li>Pairing and mob programming</li>
+          <li>...</li>
+        </ul>
       </p>
     ),
   },
@@ -66,10 +80,12 @@ export const GeodisFacts = [
     title: "Security",
     content: (
       <p>
-        I did a refacto in 2 day that made the code so much simpler that one
-        simple and clear function could have replaced 130+ exising functions. 1
-        simple generic function and 8 tests instead of 130+ functions and 400+
-        tests.
+        After three years of development, we underwent a security audit that
+        uncovered numerous issues. I lead the team to resolve all these issues,
+        and we investigated over 450 security alerts within our codebase. It was
+        a challenging yet essential endeavor that required balancing the urgent
+        need for security improvements with our commitment to delivering new
+        features on schedule
       </p>
     ),
   },
