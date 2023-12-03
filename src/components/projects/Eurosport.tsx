@@ -7,12 +7,11 @@ export const EurosportDescription = () => (
     <br />
     <br />
     All of it was serverless, with continuous delivery, and close to 100% test
-    coverage.
+    coverage. We practiced TDD and pair programming.
     <br />
     <br />
-    We were working in TDD and with a lot of pair programming. This job
-    experience was by far the best I had, with a lot of learning, fun challenges
-    and a great team, and I cannot be more proud of the work we made.
+    This job experience played a pivotal role in shaping the developer that I've
+    become. I take immense pride in the work we've made.
     <br />
     <br />
     <h5 className="text-sm font-extralight">
@@ -36,7 +35,7 @@ export const EurosportDescription = () => (
 
 export const EurosportFacts = [
   {
-    title: "API key figures",
+    title: "Key API metrics",
     content: (
       <div>
         <ul className="list-disc list-inside">
