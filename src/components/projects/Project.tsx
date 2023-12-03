@@ -64,9 +64,9 @@ export const Project = ({
             Specific topics
           </h2>
           <div className="overflow-x-auto relative">
-            <div className="flex flex-col sm:flex-row sm:w-max space-y-4 space-x-4 sm:space-y-0 sm:space-x-6 my-4">
+            <div className="flex flex-col sm:flex-row sm:w-max space-y-4 space-x-0 sm:space-y-0 sm:space-x-6 my-4">
               {facts.map((fact) => (
-                <div className="sm:w-[300px] sm:p-6 bg-white rounded-md shadow-md border border-gray-600 h-fit">
+                <div className="sm:w-[300px] p-4 sm:p-6 bg-white rounded-md shadow-md border border-gray-600 h-fit">
                   <h2 className="mb-3 text-2xl font-bold">{fact.title}</h2>
                   <p className="text-sm">{fact.content}</p>
                 </div>
