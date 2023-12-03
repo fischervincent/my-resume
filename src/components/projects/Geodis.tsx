@@ -1,3 +1,5 @@
+import type { Recommendation } from "./Recommendations";
+
 export const GeodisDescription = () => (
   <p>
     We worked on a webapp to request, monitor and track shipping.
@@ -72,3 +74,34 @@ export const GeodisFacts = [
     ),
   },
 ];
+
+export const GeodisRecommendations = [
+  {
+    author: "Laurent",
+    authorTitle: "Client and Manager",
+    date: "18/01/2023",
+    content:
+      "Merci à Vincent qui a contribué à notre produit en portant " +
+      "un regard sans concession sur l'état du code et qui nous a " +
+      "accompagné en proposant et en mettant en oeuvre une véritable" +
+      " roadmap technique (revue de l'architecture, du tooling, des " +
+      "patterns...) Vincent quitte sa mission en laissant place nette," +
+      " nous dotant de fondations solides pour bâtir la suite. Profil " +
+      "senior, que je recommande sans réserve à tout porteur de " +
+      "mission susceptible de lui offrir sujet à sa mesure.",
+  },
+  {
+    author: "Lucas",
+    authorTitle: "Developer",
+    date: "10/01/2023",
+    content:
+      "Un tech lead qui tire toute l'équipe vers le haut. " +
+      "Vincent à su trouver l'équilibre pour guider l'équipe " +
+      "dans ses décisions techniques tout en laissant chaque " +
+      "développeur y prendre pleinement sa place, libre de " +
+      " proposer et d'implémenter des solutions." +
+      "Vincent a de l'expérience sur des applications à fort traffic " +
+      "et une large culture tech. C'est très enrichissant de " +
+      "travailler et de discuter avec lui.",
+  },
+] satisfies Recommendation[];

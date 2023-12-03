@@ -1,22 +1,24 @@
 import { ISkill, Skill } from "components/skills";
 import { EurosportDescription, EurosportFacts } from "../Eurosport";
-import { GeodisDescription, GeodisFacts } from "../Geodis";
+import { GeodisDescription, GeodisFacts, GeodisRecommendations } from "../Geodis";
 import { GraneetDescription } from "../Graneet";
 import { LegalStartDescription } from "../LegalStart";
 import { PasscultureDescription } from "../Passculture";
+import type { Recommendation } from "../Recommendations";
 
 export interface Fact {
   title: string;
   content: JSX.Element;
 }
 
-interface IProject {
+export interface IProject {
   companyName: string;
   role: string;
   dates: string;
   skills: ISkill[];
   facts: Fact[];
   Description: React.FC;
+  recommendations?: Recommendation[];
 }
 
 export const projects: IProject[] = [
@@ -37,6 +39,7 @@ export const projects: IProject[] = [
     ],
     facts: GeodisFacts,
     Description: GeodisDescription,
+    recommendations: GeodisRecommendations,
   },
   {
     companyName: "Legalstart",

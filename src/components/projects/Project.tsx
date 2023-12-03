@@ -1,15 +1,9 @@
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import type { ISkill } from "components/skills";
-import type { FC } from "react";
-import type { Fact } from "./constants/projects";
+import type { IProject } from "./constants/projects";
+import { Recommendations } from "./Recommendations";
 
-interface ProjectProps {
-  companyName: string;
-  role: string;
-  dates: string;
-  skills: ISkill[];
-  facts: Fact[];
-  Description: FC;
+interface ProjectProps extends IProject {
   selectedSkills: ISkill[];
 }
 
@@ -20,6 +14,7 @@ export const Project = ({
   skills,
   facts,
   Description,
+  recommendations,
   selectedSkills,
 }: ProjectProps) => {
   const [animatedSkills] = useAutoAnimate<HTMLDivElement>();
@@ -36,7 +31,7 @@ export const Project = ({
   );
 
   return (
-    <div className="section-card">
+    <div className="section-card space-y-5">
       <div>
         <h1 className="font-sans text-3xl font-bold">{companyName}</h1>
         <div className="flex items-baseline mb-2">
@@ -60,8 +55,11 @@ export const Project = ({
         </div>
         <Description />
       </div>
+      <div>
+        <Recommendations recommendations={recommendations} />
+      </div>
       {facts.length > 0 && (
-        <div className="overflow-x-auto mt-6">
+        <div className="overflow-x-auto mt-6 relative">
           <div className="flex flex-col sm:flex-row sm:w-max space-y-4 sm:space-y-0 sm:space-x-6 my-4">
             {facts.map((fact) => (
               <div className="sm:w-[300px] p-4 sm:p-6 bg-white rounded-md shadow-md border border-gray-600">
