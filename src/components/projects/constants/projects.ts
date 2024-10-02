@@ -8,6 +8,7 @@ import { PasscultureDescription } from "../Passculture";
 import { NetatmoDescription } from "../Netatmo";
 import type { Recommendation } from "../Recommendations";
 import { DatapoleDescription } from "../Datapole";
+import { JadeIDescription } from "../JadeI";
 
 export interface Fact {
   title: string;
@@ -168,5 +169,21 @@ export const projects: IProject[] = [
     ],
     facts: [],
     Description: DatapoleDescription
+  },
+  {
+    companyName: "Jade-i",
+    role: "JS fullstack dev",
+    dates: "2014 Sept. - 2018 July (3 years and 10 months)",
+    skills: [
+      Skill.JAVA,
+      Skill.JEE,
+      Skill.JAVASCRIPT,
+      Skill.NODEJS,
+      Skill.BACKBONEJS,
+      Skill.MYSQL,
+      Skill.ANDROID,
+    ],
+    facts: [],
+    Description: JadeIDescription
   },
 ];
