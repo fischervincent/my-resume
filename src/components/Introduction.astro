@@ -1,5 +1,13 @@
 ---
-const isAvailable = false;
+const calculateYearsSinceDate = (startDate: Date) => {
+  const today = new Date();
+  const diffInMilliseconds = today.getTime() - startDate.getTime();
+  const millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25; // Taking leap years into account
+  return Math.floor(diffInMilliseconds / millisecondsInYear).toString();
+};
+
+const isAvailable = true;
+const nbYearsWorking = calculateYearsSinceDate(new Date("2015-02-01"));
 ---
 
 <div>
@@ -58,7 +66,7 @@ const isAvailable = false;
     <p>
       <strong>Hi</strong>, I'm Vincent, a french <strong>web developer</strong> and
       <strong>tech lead</strong> based in Paris with <strong
-        class="whitespace-nowrap">8 years</strong
+        class="whitespace-nowrap">{nbYearsWorking} years</strong
       > of experience.<br />
     </p>
     <p class="mt-6">
