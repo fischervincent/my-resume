@@ -17,11 +17,11 @@ export const LegalStartRecommendation = [
     date: "07/12/2023",
     recommendationWebsite: "Malt",
     content:
-      "Nous avons travaillé avec Vincent sur un projet pour  " +
-      "lequel nous avons sollicité ses compétences en  " +
-      "développement node js, il s'est de suite intégré à  " +
-      "l'équipe déjà en place, il a très vite compris les  " +
-      "enjeux du projet et l'environnement technique.  " +
+      "Nous avons travaillé avec Vincent sur un projet pour " +
+      "lequel nous avons sollicité ses compétences en " +
+      "développement node js, il s'est de suite intégré à " +
+      "l'équipe déjà en place, il a très vite compris les " +
+      "enjeux du projet et l'environnement technique. " +
       "Cela a été un vrai plaisir de travailler avec lui.",
   },
 ] satisfies Recommendation[];
