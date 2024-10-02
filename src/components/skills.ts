@@ -1,5 +1,5 @@
 export const Skill = {
-  ANDROID: 'ANDROID',
+  ANDROID: 'Android',
   AWS: 'AWS',
   AZURE: 'Azure',
   BACKBONEJS: 'Backbone.js',
