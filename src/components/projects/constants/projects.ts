@@ -1,9 +1,9 @@
 import { ISkill, Skill } from "components/skills";
 import { SncfConnectAndTechDescription } from "../SncfConnectAndTech";
-import { EurosportDescription, EurosportFacts } from "../Eurosport";
+import { EurosportDescription, EurosportFacts, EurosportRecommendations } from "../Eurosport";
 import { GeodisDescription, GeodisFacts, GeodisRecommendations } from "../Geodis";
 import { GraneetDescription } from "../Graneet";
-import { LegalStartDescription } from "../LegalStart";
+import { LegalStartDescription, LegalStartRecommendation } from "../LegalStart";
 import { PasscultureDescription } from "../Passculture";
 import { NetatmoDescription } from "../Netatmo";
 import type { Recommendation } from "../Recommendations";
@@ -102,6 +102,7 @@ export const projects: IProject[] = [
     ],
     facts: [],
     Description: LegalStartDescription,
+    recommendations: LegalStartRecommendation
   },
   {
     companyName: "Graneet",
@@ -156,6 +157,7 @@ export const projects: IProject[] = [
     ],
     facts: EurosportFacts,
     Description: EurosportDescription,
+    recommendations: EurosportRecommendations,
   },
   {
     companyName: "Datapole",

@@ -22,20 +22,5 @@ export const SncfConnectAndTechDescription = () => (
     performance and infrastructure cost issues, utilizing the SNCF Connect &
     Tech Terraform framework, transforming the code from a pure functional
     paradigm to procedural, and aligning with new user requirements.
-    <br />
-    <br />I decided to leave Sncf Connect & Tech for 2 reasons:
-    <ul>
-      <li>
-        - I realised that I had no place in the future of the company because I
-        was freelance, and because they wanted to stop using javascript for the
-        backend and use only kotlin and containers.
-      </li>
-      <li>
-        - Additionally, the project I was working on was unnecessarily
-        complicated and seemed destined to take years instead of months,
-        primarily due to the lack of functional specifications.
-      </li>
-    </ul>
-    <br />
   </p>
 );

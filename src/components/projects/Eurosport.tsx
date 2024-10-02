@@ -1,3 +1,5 @@
+import { Recommendation } from "./Recommendations";
+
 export const EurosportDescription = () => (
   <p>
     We built from scratch a platform to ingest sports data, and a GraphQL API to
@@ -32,6 +34,28 @@ export const EurosportDescription = () => (
     better developper experience and better performances overall.
   </p>
 );
+
+export const EurosportRecommendations = [
+  {
+    author: "Benoît d'Oncieu",
+    authorTitle: "Software Enineering Manager",
+    date: "07/12/2023",
+    recommendationWebsite: "LinkedIn",
+    content:
+      "J'ai eu le plaisir de travailler avec Vincent en tant que  " +
+      "son manager technique chez Eurosport (WBD Sports). En tant  " +
+      "que développeur JavaScript, Vincent a brillé par son esprit  " +
+      "d'initiative, notamment en optimisant notre API GraphQL et  " +
+      "en organisant des workshops techniques. Son approche  " +
+      "analytique et sa capacité à aller au bout des choses ont  " +
+      "grandement bénéficié à notre équipe. Vincent se distingue  " +
+      "également par son écoute, son respect des autres et sa  " +
+      "constance, contribuant à une atmosphère de travail positive.  " +
+      "Bien qu'il ait quitté l'équipe pour voir plus de temps  " +
+      "pour ses passions, son impact reste tangible. Vincent  " +
+      "est sans aucun doute un atout précieux pour toute équipe !",
+  },
+] satisfies Recommendation[];
 
 export const EurosportFacts = [
   {

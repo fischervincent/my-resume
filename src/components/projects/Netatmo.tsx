@@ -12,8 +12,5 @@ export const NetatmoDescription = () => (
     technical analysis for a significant new feature in the Netatmo's business
     strategy: offline installation for professional installers.
     <br />
-    <br />I left because Netatmo's approach is very different and not aligned
-    with my tech culture, both in terms of organization and coding practices.
-    And I saw almost no opportunities for growth.
   </p>
 );

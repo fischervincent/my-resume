@@ -96,6 +96,7 @@ export const GeodisRecommendations = [
     author: "Laurent",
     authorTitle: "Client and Manager",
     date: "18/01/2023",
+    recommendationWebsite: "Malt",
     content:
       "Merci à Vincent qui a contribué à notre produit en portant " +
       "un regard sans concession sur l'état du code et qui nous a " +
@@ -109,6 +110,7 @@ export const GeodisRecommendations = [
   {
     author: "Lucas",
     authorTitle: "Developer",
+    recommendationWebsite: "Malt",
     date: "10/01/2023",
     content:
       "Un tech lead qui tire toute l'équipe vers le haut. " +
