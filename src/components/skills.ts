@@ -18,6 +18,8 @@ export const Skill = {
   KAFKA: 'KAFKA',
   EXPRESS: 'Express',
   MICRO_SERVICES: 'Microservices',
+  PYTHON: 'Python',
+  DJANGO: 'Django',
   TURBOREPO: 'TurboRepo',
   JAVASCRIPT: 'Javascript',
   JEE: 'JEE',

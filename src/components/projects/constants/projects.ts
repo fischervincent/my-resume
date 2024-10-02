@@ -9,6 +9,7 @@ import { NetatmoDescription } from "../Netatmo";
 import type { Recommendation } from "../Recommendations";
 import { DatapoleDescription } from "../Datapole";
 import { JadeIDescription } from "../JadeI";
+import { AlstomIntershipDescription } from "../Alstom";
 
 export interface Fact {
   title: string;
@@ -172,7 +173,7 @@ export const projects: IProject[] = [
   },
   {
     companyName: "Jade-i",
-    role: "JS fullstack dev",
+    role: "Fullstack dev",
     dates: "2014 Sept. - 2018 July (3 years and 10 months)",
     skills: [
       Skill.JAVA,
@@ -186,4 +187,17 @@ export const projects: IProject[] = [
     facts: [],
     Description: JadeIDescription
   },
+  {
+    companyName: "Alstom",
+    role: "Software engineer intern",
+    dates: "2012 Sept. - 2013 Feb (6 months)",
+    skills: [
+      Skill.PYTHON,
+      Skill.DJANGO,
+      Skill.JAVASCRIPT,
+    ],
+    facts: [],
+    Description: AlstomIntershipDescription
+  },
+
 ];
