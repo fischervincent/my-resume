@@ -26,10 +26,10 @@ export const EurosportDescription = () => (
     <br />
     <br />
     After noticing that terraform was not up to date with some GCP features we
-    wanted to use, we decided to move from GCP to AWS, and from Terraform to
-    Serverless Framework. It took 2 devs less than 4 weeks to do this migration,
-    and we immediatly noticed a better developper experience and better
-    performances overall.
+    wanted to use, and because the other teams were using AWS, we decided to
+    move from GCP to AWS, and from Terraform to Serverless Framework. It took 2
+    devs less than 4 weeks to do this migration, and we immediatly noticed a
+    better developper experience and better performances overall.
   </p>
 );
 
