@@ -1,15 +1,14 @@
 ---
-import { Projects } from 'components/projects/Projects';
-import Section from 'components/Section.astro';
-import Layout from 'layouts/Layout.astro';
-
+import { Projects } from "components/projects/Projects";
+import Section from "components/Section.astro";
+import Layout from "layouts/Layout.astro";
 ---
 
 <Layout title="Vincent's work">
-	<main class="w-full max-w-full overflow-hidden">
-		<Section title="Work Experiences" id="work" isWIP>
-			{/* does not build if client:load */}
-			<Projects client:only/>
-		</Section>
-	</main>
+  <main class="w-full max-w-full overflow-hidden">
+    <Section title="Work Experiences" id="work">
+      {/* does not build if client:load */}
+      <Projects client:only />
+    </Section>
+  </main>
 </Layout>
