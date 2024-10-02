@@ -7,6 +7,7 @@ import { LegalStartDescription } from "../LegalStart";
 import { PasscultureDescription } from "../Passculture";
 import { NetatmoDescription } from "../Netatmo";
 import type { Recommendation } from "../Recommendations";
+import { DatapoleDescription } from "../Datapole";
 
 export interface Fact {
   title: string;
@@ -153,5 +154,19 @@ export const projects: IProject[] = [
     ],
     facts: EurosportFacts,
     Description: EurosportDescription,
+  },
+  {
+    companyName: "Datapole",
+    role: "JS fullstack dev",
+    dates: "2018 Sept. - 2019 Sept. (13 months)",
+    skills: [
+      Skill.TYPESCRIPT,
+      Skill.JAVASCRIPT,
+      Skill.NODEJS,
+      Skill.MONGODB,
+      Skill.POSTGRESQL,
+    ],
+    facts: [],
+    Description: DatapoleDescription
   },
 ];
