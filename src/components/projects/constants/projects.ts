@@ -5,6 +5,7 @@ import { GeodisDescription, GeodisFacts, GeodisRecommendations } from "../Geodis
 import { GraneetDescription } from "../Graneet";
 import { LegalStartDescription } from "../LegalStart";
 import { PasscultureDescription } from "../Passculture";
+import { NetatmoDescription } from "../Netatmo";
 import type { Recommendation } from "../Recommendations";
 
 export interface Fact {
@@ -23,6 +24,25 @@ export interface IProject {
 }
 
 export const projects: IProject[] = [
+  {
+    companyName: "Netatmo",
+    role: "Backend dev",
+    dates: "2023 Aug. - 2024 June (11 months)",
+    skills: [
+      Skill.TYPESCRIPT,
+      Skill.JAVASCRIPT,
+      Skill.PHP,
+      Skill.NODEJS,
+      Skill.MONGODB,
+      Skill.KAFKA,
+      Skill.MICRO_SERVICES,
+      Skill.CLEAN_ARCHITECTURE,
+      Skill.DDD,
+      Skill.JEST,
+    ],
+    facts: [],
+    Description: NetatmoDescription
+  },
   {
     companyName: "SNCF Connect & Tech",
     role: "Backend dev",

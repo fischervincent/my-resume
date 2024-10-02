@@ -2,7 +2,9 @@ export const Skill = {
   AWS: 'AWS',
   AZURE: 'Azure',
   CIRCLECI: 'CircleCI',
+  CLEAN_ARCHITECTURE: 'Clean Architecture',
   CUCUMBER: 'Cucumber',
+  DDD: 'DDD',
   DOCKER: 'Docker',
   GCP: 'GCP',
   CLOUD_FUNCTION: 'Cloud Function',
@@ -10,6 +12,7 @@ export const Skill = {
   GIT: 'git',
   GITHUB_ACTIONS: 'Github Actions',
   GRAPHQL: 'GraphQL',
+  KAFKA: 'KAFKA',
   EXPRESS: 'Express',
   MICRO_SERVICES: 'Microservices',
   TURBOREPO: 'TurboRepo',
@@ -36,6 +39,7 @@ export const Skill = {
   TYPESCRIPT: 'Typescript',
   SENTRY: 'Sentry',
   NEW_RELIC: 'New Relic',
+  PHP: 'PHP',
   // METHODOLOGIES
   TDD: 'TDD',
   // ROLES
