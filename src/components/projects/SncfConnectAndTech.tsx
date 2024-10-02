@@ -2,7 +2,7 @@ export const SncfConnectAndTechDescription = () => (
   <p>
     I worked as a backend developer for the very popular app Sncf Connect, the
     leading app for train booking in France, used by millions of users every
-    day.
+    day. There are about 200 devs working for Sncf Connect & Tech.
     <br />
     <br /> I worked on two projects.
     <br />
