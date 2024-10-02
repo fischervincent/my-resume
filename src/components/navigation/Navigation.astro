@@ -4,13 +4,13 @@ import { NAV_ITEMS } from "./NavItems";
 ---
 
 <aside>
-    <div class="sm:sticky sm:top-20 md:w-[180px] flex flex-wrap justify-end md:justify-start mb-10">
-      <ul class="flex flex-row space-x-3 flex-wrap md:space-x-0 md:space-y-5 md:flex-col font-bold text-gray-500">
-        {
-          NAV_ITEMS.map((item) => (
-            <NavItem path={item.path} title={item.title} />
-          ))
-        }
-      </ul>  
-    </div>
+  <div
+    class="sm:sticky sm:top-20 md:w-[180px] flex flex-wrap justify-end md:justify-start mb-10"
+  >
+    <ul
+      class="flex flex-row flex-wrap md:space-y-5 md:flex-col font-bold text-gray-500"
+    >
+      {NAV_ITEMS.map((item) => <NavItem path={item.path} title={item.title} />)}
+    </ul>
+  </div>
 </aside>
