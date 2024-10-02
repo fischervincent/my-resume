@@ -29,7 +29,7 @@ export interface IProject {
 export const projects: IProject[] = [
   {
     companyName: "Netatmo",
-    role: "Backend dev",
+    role: "Backend developer",
     dates: "2023 Aug. - 2024 June (11 months)",
     skills: [
       Skill.TYPESCRIPT,
@@ -48,7 +48,7 @@ export const projects: IProject[] = [
   },
   {
     companyName: "SNCF Connect & Tech",
-    role: "Backend dev",
+    role: "Backend developer",
     dates: "2023 Feb. - 2023 July (6 months)",
     skills: [
       Skill.TYPESCRIPT,
@@ -88,7 +88,7 @@ export const projects: IProject[] = [
   },
   {
     companyName: "Legalstart",
-    role: "NodeJS/AWS Developer",
+    role: "NodeJS/AWS developer",
     dates: "2022 march - 2022 may (2 months)",
     skills: [
       Skill.TYPESCRIPT,
@@ -106,7 +106,7 @@ export const projects: IProject[] = [
   },
   {
     companyName: "Graneet",
-    role: "NodeJS/ReactJS Developer",
+    role: "NodeJS/ReactJS developer",
     dates: "2021 nov. - 2022 feb. (3 months)",
     skills: [
       Skill.TYPESCRIPT,
@@ -121,7 +121,7 @@ export const projects: IProject[] = [
   },
   {
     companyName: "Pass Culture / Polyconseil",
-    role: "React-Native Developer",
+    role: "React-Native developer",
     dates: "2021 jul. - 2021 september. (2 months)",
     skills: [
       Skill.TYPESCRIPT,
@@ -161,7 +161,7 @@ export const projects: IProject[] = [
   },
   {
     companyName: "Datapole",
-    role: "JS fullstack dev",
+    role: "JS fullstack developer",
     dates: "2018 Sept. - 2019 Sept. (13 months)",
     skills: [
       Skill.TYPESCRIPT,
@@ -175,7 +175,7 @@ export const projects: IProject[] = [
   },
   {
     companyName: "Jade-i",
-    role: "Fullstack dev",
+    role: "Fullstack developer",
     dates: "2014 Sept. - 2018 July (3 years and 10 months)",
     skills: [
       Skill.JAVA,
