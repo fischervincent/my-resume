@@ -3,11 +3,13 @@ const calculateYearsSinceDate = (startDate: Date) => {
   const today = new Date();
   const diffInMilliseconds = today.getTime() - startDate.getTime();
   const millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25; // Taking leap years into account
-  return Math.floor(diffInMilliseconds / millisecondsInYear).toString();
+  return diffInMilliseconds / millisecondsInYear;
 };
 
 const isAvailable = true;
-const nbYearsWorking = calculateYearsSinceDate(new Date("2015-02-01"));
+const nbYearsWorking: string = Math.floor(
+  calculateYearsSinceDate(new Date("2014-09-01")) + 0.5 // add 0,5 years of internship
+).toString();
 ---
 
 <div>
