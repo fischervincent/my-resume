@@ -33,7 +33,7 @@ export const Skills = () => {
           {
             group: "Backend",
             skills: [
-              { skillName: "Node", experienceLevel: 4 },
+              { skillName: "NodeJS", experienceLevel: 4 },
               { skillName: "GraphQL", experienceLevel: 3, isFavorite: true },
               { skillName: "NestJS", experienceLevel: 3 / 12 },
             ],

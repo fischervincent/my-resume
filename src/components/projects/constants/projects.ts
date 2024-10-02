@@ -1,4 +1,5 @@
 import { ISkill, Skill } from "components/skills";
+import { SncfConnectAndTechDescription } from "../SncfConnectAndTech";
 import { EurosportDescription, EurosportFacts } from "../Eurosport";
 import { GeodisDescription, GeodisFacts, GeodisRecommendations } from "../Geodis";
 import { GraneetDescription } from "../Graneet";
@@ -23,13 +24,34 @@ export interface IProject {
 
 export const projects: IProject[] = [
   {
+    companyName: "SNCF Connect & Tech",
+    role: "Backend dev",
+    dates: "2023 Feb. - 2023 July (6 months)",
+    skills: [
+      Skill.TYPESCRIPT,
+      Skill.JAVASCRIPT,
+      Skill.KOTLIN,
+      Skill.NODEJS,
+      Skill.EXPRESS,
+      Skill.MONGODB,
+      Skill.AWS,
+      Skill.LAMBDA,
+      Skill.DYNAMODB,
+      Skill.JEST,
+
+    ],
+    facts: [],
+    Description: SncfConnectAndTechDescription
+  },
+  {
     companyName: "Geodis SCO",
-    role: "Tech lead",
+    role: "Tech lead fullstack NodeJS/ReactJS",
     dates: "2022 sept. - 2022 dec. (8 months)",
     skills: [
       Skill.TYPESCRIPT,
-      Skill.REACT,
-      Skill.NODE,
+      Skill.JAVASCRIPT,
+      Skill.REACTJS,
+      Skill.NODEJS,
       Skill.EXPRESS,
       Skill.MONGODB,
       Skill.MICRO_SERVICES,
@@ -43,11 +65,11 @@ export const projects: IProject[] = [
   },
   {
     companyName: "Legalstart",
-    role: "Node/AWS Developer",
+    role: "NodeJS/AWS Developer",
     dates: "2022 march - 2022 may (2 months)",
     skills: [
       Skill.TYPESCRIPT,
-      Skill.NODE,
+      Skill.NODEJS,
       Skill.AWS,
       Skill.LAMBDA,
       Skill.STEP_FUNCTION,
@@ -60,12 +82,12 @@ export const projects: IProject[] = [
   },
   {
     companyName: "Graneet",
-    role: "Node/React Developer",
+    role: "NodeJS/ReactJS Developer",
     dates: "2021 nov. - 2022 feb. (3 months)",
     skills: [
       Skill.TYPESCRIPT,
-      Skill.REACT,
-      Skill.NODE,
+      Skill.REACTJS,
+      Skill.NODEJS,
       Skill.NESTJS,
       Skill.POSTGRESQL,
       Skill.JEST,
@@ -80,7 +102,7 @@ export const projects: IProject[] = [
     skills: [
       Skill.TYPESCRIPT,
       Skill.REACT_NATIVE,
-      Skill.REACT,
+      Skill.REACTJS,
       Skill.JEST,
     ],
     facts: [],
@@ -88,11 +110,11 @@ export const projects: IProject[] = [
   },
   {
     companyName: "Eurosport",
-    role: "Tech lead",
+    role: "Tech lead NodeJS/AWS",
     dates: "2019 oct. - 2021 jul. (1 year 10 months)",
     skills: [
       Skill.JAVASCRIPT,
-      Skill.NODE,
+      Skill.NODEJS,
       Skill.GRAPHQL,
       Skill.AWS,
       Skill.SQS_SNS,
