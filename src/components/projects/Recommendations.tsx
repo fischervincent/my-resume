@@ -53,7 +53,7 @@ export const Recommendations = ({ recommendations }: RecommendationsProps) => {
                   )}
                   {recommendationWebsite === "LinkedIn" && (
                     <a
-                      href="https://www.https://www.linkedin.com/in/vincent-fischer"
+                      href="https://www.linkedin.com/in/vincent-fischer"
                       className="link link-primary flex items-center space-x-1"
                     >
                       <img
