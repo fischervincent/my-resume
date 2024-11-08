@@ -5,7 +5,7 @@ import { GeodisDescription, GeodisFacts, GeodisRecommendations } from "../Geodis
 import { GraneetDescription } from "../Graneet";
 import { LegalStartDescription, LegalStartRecommendation } from "../LegalStart";
 import { PasscultureDescription } from "../Passculture";
-import { NetatmoDescription } from "../Netatmo";
+import { NetatmoDescription, NetatmoRecommendation } from "../Netatmo";
 import type { Recommendation } from "../Recommendations";
 import { DatapoleDescription } from "../Datapole";
 import { JadeIDescription } from "../JadeI";
@@ -44,7 +44,8 @@ export const projects: IProject[] = [
       Skill.JEST,
     ],
     facts: [],
-    Description: NetatmoDescription
+    Description: NetatmoDescription,
+    recommendations: NetatmoRecommendation,
   },
   {
     companyName: "SNCF Connect & Tech",
