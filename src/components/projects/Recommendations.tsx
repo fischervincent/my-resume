@@ -44,7 +44,7 @@ export const Recommendations = ({ recommendations }: RecommendationsProps) => {
                       className="link link-primary flex items-center space-x-1"
                     >
                       <img
-                        src="/assets/img/malt.png"
+                        src={`${import.meta.env.BASE_URL}assets/img/malt.png`}
                         alt="Malt"
                         className="w-6 h-6"
                       />
@@ -57,7 +57,7 @@ export const Recommendations = ({ recommendations }: RecommendationsProps) => {
                       className="link link-primary flex items-center space-x-1"
                     >
                       <img
-                        src="/assets/img/linkedIn34.png"
+                        src={`${import.meta.env.BASE_URL}assets/img/linkedIn34.png`}
                         alt="LinkedIn"
                         className="w-6 h-6"
                       />
